@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		0999FFE029E00C730054AFC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFDF29E00C730054AFC5 /* AppDelegate.swift */; };
 		0999FFE229E00C730054AFC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFE129E00C730054AFC5 /* SceneDelegate.swift */; };
-		0999FFE429E00C730054AFC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFE329E00C730054AFC5 /* ViewController.swift */; };
 		0999FFE729E00C730054AFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0999FFE529E00C730054AFC5 /* Main.storyboard */; };
 		0999FFE929E00C740054AFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0999FFE829E00C740054AFC5 /* Assets.xcassets */; };
 		0999FFEC29E00C740054AFC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0999FFEA29E00C740054AFC5 /* LaunchScreen.storyboard */; };
+		0999FFF729E00D980054AFC5 /* VIewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFF329E00D980054AFC5 /* VIewController2.swift */; };
+		0999FFF829E00D980054AFC5 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFF429E00D980054AFC5 /* ViewController3.swift */; };
+		0999FFF929E00D980054AFC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFF529E00D980054AFC5 /* ViewController.swift */; };
+		0999FFFA29E00D980054AFC5 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0999FFF629E00D980054AFC5 /* ViewController4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0999FFDC29E00C730054AFC5 /* GO_SOPT_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GO_SOPT_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0999FFDF29E00C730054AFC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0999FFE129E00C730054AFC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0999FFE329E00C730054AFC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0999FFE629E00C730054AFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0999FFE829E00C740054AFC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0999FFEB29E00C740054AFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0999FFED29E00C740054AFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0999FFF329E00D980054AFC5 /* VIewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VIewController2.swift; path = ../../../../MINJOO/GO_SOPT_iOS_SEMINAR/GO_SOPT_iOS_SEMINAR/VIewController2.swift; sourceTree = "<group>"; };
+		0999FFF429E00D980054AFC5 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController3.swift; path = ../../../../MINJOO/GO_SOPT_iOS_SEMINAR/GO_SOPT_iOS_SEMINAR/ViewController3.swift; sourceTree = "<group>"; };
+		0999FFF529E00D980054AFC5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../MINJOO/GO_SOPT_iOS_SEMINAR/GO_SOPT_iOS_SEMINAR/ViewController.swift; sourceTree = "<group>"; };
+		0999FFF629E00D980054AFC5 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController4.swift; path = ../../../../MINJOO/GO_SOPT_iOS_SEMINAR/GO_SOPT_iOS_SEMINAR/ViewController4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				0999FFDF29E00C730054AFC5 /* AppDelegate.swift */,
+				0999FFF529E00D980054AFC5 /* ViewController.swift */,
+				0999FFF329E00D980054AFC5 /* VIewController2.swift */,
+				0999FFF429E00D980054AFC5 /* ViewController3.swift */,
+				0999FFF629E00D980054AFC5 /* ViewController4.swift */,
 				0999FFE129E00C730054AFC5 /* SceneDelegate.swift */,
-				0999FFE329E00C730054AFC5 /* ViewController.swift */,
 				0999FFE529E00C730054AFC5 /* Main.storyboard */,
 				0999FFE829E00C740054AFC5 /* Assets.xcassets */,
 				0999FFEA29E00C740054AFC5 /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0999FFE429E00C730054AFC5 /* ViewController.swift in Sources */,
+				0999FFF929E00D980054AFC5 /* ViewController.swift in Sources */,
+				0999FFFA29E00D980054AFC5 /* ViewController4.swift in Sources */,
 				0999FFE029E00C730054AFC5 /* AppDelegate.swift in Sources */,
+				0999FFF729E00D980054AFC5 /* VIewController2.swift in Sources */,
+				0999FFF829E00D980054AFC5 /* ViewController3.swift in Sources */,
 				0999FFE229E00C730054AFC5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
