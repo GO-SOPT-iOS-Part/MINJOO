@@ -23,6 +23,7 @@
 		09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */; };
 		09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */; };
 		09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6D29E156E700D435F5 /* uibutton+.swift */; };
+		09AF2E7229E245ED00D435F5 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 09AF2E7129E245ED00D435F5 /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			files = (
 				09AF2E6329E141ED00D435F5 /* SnapKit in Frameworks */,
 				09AF2E6629E1424800D435F5 /* Then in Frameworks */,
+				09AF2E7229E245ED00D435F5 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +116,7 @@
 			packageProductDependencies = (
 				09AF2E6229E141ED00D435F5 /* SnapKit */,
 				09AF2E6529E1424800D435F5 /* Then */,
+				09AF2E7129E245ED00D435F5 /* Inject */,
 			);
 			productName = SOPT_iOS_SEMINAR;
 			productReference = 0941D48629E0306F00B582B0 /* SOPT_iOS_SEMINAR.app */;
@@ -146,6 +149,7 @@
 			packageReferences = (
 				09AF2E6129E141ED00D435F5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				09AF2E6429E1424800D435F5 /* XCRemoteSwiftPackageReference "Then" */,
+				09AF2E7029E245ED00D435F5 /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			productRefGroup = 0941D48729E0306F00B582B0 /* Products */;
 			projectDirPath = "";
@@ -334,6 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-Xlinker-interposal";
 				PRODUCT_BUNDLE_IDENTIFIER = "j.SOPT-iOS-SEMINAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -360,6 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-Xlinker-interposal";
 				PRODUCT_BUNDLE_IDENTIFIER = "j.SOPT-iOS-SEMINAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -408,6 +414,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		09AF2E7029E245ED00D435F5 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -420,6 +434,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 09AF2E6429E1424800D435F5 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		09AF2E7129E245ED00D435F5 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09AF2E7029E245ED00D435F5 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
