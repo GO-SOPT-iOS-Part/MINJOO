@@ -16,9 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let injectViewController = Inject.ViewControllerHost(FirstViewController_colorbox())
+        let injectViewController = Inject.ViewControllerHost(Auth_tvingView())
+        
+        let navigationController = UINavigationController(rootViewController: Auth_tvingView())
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = injectViewController
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
 }

@@ -15,6 +15,22 @@
 		0987379929E03F3400FE8DAB /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379529E03F3400FE8DAB /* ViewController4.swift */; };
 		0987379A29E03F3400FE8DAB /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379629E03F3400FE8DAB /* ViewController3.swift */; };
 		0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379729E03F3400FE8DAB /* ViewController2.swift */; };
+		0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987E80329E52DE20082CCD2 /* Main_tvingView.swift */; };
+		098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098937E029E25C0000B9ABDC /* Auth_tvingView.swift */; };
+		098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098937E229E262BD00B9ABDC /* UIColor+.swift */; };
+		098937E629E267A400B9ABDC /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098937E529E267A400B9ABDC /* PretendardVariable.ttf */; };
+		098B559829E26A0500495CEC /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B559729E26A0500495CEC /* UIFont+.swift */; };
+		098B55A229E2879F00495CEC /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559929E2879E00495CEC /* Pretendard-ExtraLight.otf */; };
+		098B55A329E2879F00495CEC /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559A29E2879E00495CEC /* Pretendard-Bold.otf */; };
+		098B55A429E2879F00495CEC /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559B29E2879E00495CEC /* Pretendard-Black.otf */; };
+		098B55A529E2879F00495CEC /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559C29E2879E00495CEC /* Pretendard-Regular.otf */; };
+		098B55A629E2879F00495CEC /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559D29E2879E00495CEC /* Pretendard-Light.otf */; };
+		098B55A729E2879F00495CEC /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559E29E2879E00495CEC /* Pretendard-Medium.otf */; };
+		098B55A829E2879F00495CEC /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B559F29E2879F00495CEC /* Pretendard-Thin.otf */; };
+		098B55A929E2879F00495CEC /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B55A029E2879F00495CEC /* Pretendard-ExtraBold.otf */; };
+		098B55AA29E2879F00495CEC /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B55A129E2879F00495CEC /* Pretendard-SemiBold.otf */; };
+		098B55B929E3C80B00495CEC /* Welcome_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */; };
+		0993BE1929F13205000B490B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993BE1829F13205000B490B /* UIView+.swift */; };
 		09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */; };
 		09AF2E5C29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */; };
 		09AF2E6329E141ED00D435F5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 09AF2E6229E141ED00D435F5 /* SnapKit */; };
@@ -24,6 +40,11 @@
 		09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */; };
 		09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6D29E156E700D435F5 /* uibutton+.swift */; };
 		09AF2E7229E245ED00D435F5 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 09AF2E7129E245ED00D435F5 /* Inject */; };
+		09EBA58529EE620100546B5A /* CreateNickname_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */; };
+		09EBA58729EE68A400546B5A /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58629EE68A400546B5A /* UILabel+.swift */; };
+		09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58829EE68CB00546B5A /* UITextField+.swift */; };
+		09EBA58D29EE9C2100546B5A /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EBA58C29EE9C2100546B5A /* eye.png */; };
+		09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF00DD29F1629F000A2A2E /* UIButton+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +58,38 @@
 		0987379529E03F3400FE8DAB /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		0987379629E03F3400FE8DAB /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		0987379729E03F3400FE8DAB /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		0987E80329E52DE20082CCD2 /* Main_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_tvingView.swift; sourceTree = "<group>"; };
+		098937E029E25C0000B9ABDC /* Auth_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth_tvingView.swift; sourceTree = "<group>"; };
+		098937E229E262BD00B9ABDC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		098937E529E267A400B9ABDC /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		098B559729E26A0500495CEC /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		098B559929E2879E00495CEC /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		098B559A29E2879E00495CEC /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		098B559B29E2879E00495CEC /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		098B559C29E2879E00495CEC /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		098B559D29E2879E00495CEC /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		098B559E29E2879E00495CEC /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		098B559F29E2879F00495CEC /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		098B55A029E2879F00495CEC /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		098B55A129E2879F00495CEC /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		098B55AF29E28D3700495CEC /* eye-slash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye-slash.png"; sourceTree = "<group>"; };
+		098B55B029E28D3700495CEC /* btn_before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_before.png; sourceTree = "<group>"; };
+		098B55B129E28D3700495CEC /* x-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x-circle.png"; sourceTree = "<group>"; };
+		098B55B329E28D3800495CEC /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome_tvingView.swift; sourceTree = "<group>"; };
+		0993BE1829F13205000B490B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_DelegatePattern.swift; sourceTree = "<group>"; };
 		09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_DelegatePattern.swift; sourceTree = "<group>"; };
 		09AF2E6729E1439400D435F5 /* FirstViewController_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_button.swift; sourceTree = "<group>"; };
 		09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_button.swift; sourceTree = "<group>"; };
 		09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_colorbox.swift; sourceTree = "<group>"; };
 		09AF2E6D29E156E700D435F5 /* uibutton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uibutton+.swift"; sourceTree = "<group>"; };
+		09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNickname_tvingView.swift; sourceTree = "<group>"; };
+		09EBA58629EE68A400546B5A /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		09EBA58829EE68CB00546B5A /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		09EBA58C29EE9C2100546B5A /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
+		09EBA59029EFD4BD00546B5A /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rectangle.png; sourceTree = "<group>"; };
+		09EF00DD29F1629F000A2A2E /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +109,9 @@
 		0941D47D29E0306F00B582B0 = {
 			isa = PBXGroup;
 			children = (
+				098937DF29E25BD400B9ABDC /* assignment2 */,
+				098937DD29E25B8700B9ABDC /* feat1 */,
+				098937DE29E25BAA00B9ABDC /* feat2 */,
 				0941D48829E0306F00B582B0 /* SOPT_iOS_SEMINAR */,
 				0941D48729E0306F00B582B0 /* Products */,
 			);
@@ -78,16 +128,6 @@
 		0941D48829E0306F00B582B0 /* SOPT_iOS_SEMINAR */ = {
 			isa = PBXGroup;
 			children = (
-				0987379429E03F3400FE8DAB /* ViewController.swift */,
-				0987379729E03F3400FE8DAB /* ViewController2.swift */,
-				0987379629E03F3400FE8DAB /* ViewController3.swift */,
-				0987379529E03F3400FE8DAB /* ViewController4.swift */,
-				09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */,
-				09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */,
-				09AF2E6729E1439400D435F5 /* FirstViewController_button.swift */,
-				09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */,
-				09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */,
-				09AF2E6D29E156E700D435F5 /* uibutton+.swift */,
 				0941D48929E0306F00B582B0 /* AppDelegate.swift */,
 				0941D48B29E0306F00B582B0 /* SceneDelegate.swift */,
 				0941D49229E0307000B582B0 /* Assets.xcassets */,
@@ -95,6 +135,95 @@
 				0941D49729E0307000B582B0 /* Info.plist */,
 			);
 			path = SOPT_iOS_SEMINAR;
+			sourceTree = "<group>";
+		};
+		0982C04A29F17F070057301E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				098937E029E25C0000B9ABDC /* Auth_tvingView.swift */,
+				098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */,
+				09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */,
+				0987E80329E52DE20082CCD2 /* Main_tvingView.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		0982C04B29F17F110057301E /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				098937E229E262BD00B9ABDC /* UIColor+.swift */,
+				09EF00DD29F1629F000A2A2E /* UIButton+.swift */,
+				098B559729E26A0500495CEC /* UIFont+.swift */,
+				09EBA58829EE68CB00546B5A /* UITextField+.swift */,
+				09EBA58629EE68A400546B5A /* UILabel+.swift */,
+				0993BE1829F13205000B490B /* UIView+.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		098937DD29E25B8700B9ABDC /* feat1 */ = {
+			isa = PBXGroup;
+			children = (
+				0987379429E03F3400FE8DAB /* ViewController.swift */,
+				0987379729E03F3400FE8DAB /* ViewController2.swift */,
+				0987379629E03F3400FE8DAB /* ViewController3.swift */,
+				0987379529E03F3400FE8DAB /* ViewController4.swift */,
+			);
+			path = feat1;
+			sourceTree = "<group>";
+		};
+		098937DE29E25BAA00B9ABDC /* feat2 */ = {
+			isa = PBXGroup;
+			children = (
+				09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */,
+				09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */,
+				09AF2E6729E1439400D435F5 /* FirstViewController_button.swift */,
+				09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */,
+				09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */,
+				09AF2E6D29E156E700D435F5 /* uibutton+.swift */,
+			);
+			path = feat2;
+			sourceTree = "<group>";
+		};
+		098937DF29E25BD400B9ABDC /* assignment2 */ = {
+			isa = PBXGroup;
+			children = (
+				098937E429E2677400B9ABDC /* font */,
+				098B55AB29E28D0800495CEC /* img */,
+				0982C04B29F17F110057301E /* extension */,
+				0982C04A29F17F070057301E /* VC */,
+			);
+			path = assignment2;
+			sourceTree = "<group>";
+		};
+		098937E429E2677400B9ABDC /* font */ = {
+			isa = PBXGroup;
+			children = (
+				098937E529E267A400B9ABDC /* PretendardVariable.ttf */,
+				098B559B29E2879E00495CEC /* Pretendard-Black.otf */,
+				098B559A29E2879E00495CEC /* Pretendard-Bold.otf */,
+				098B55A029E2879F00495CEC /* Pretendard-ExtraBold.otf */,
+				098B559929E2879E00495CEC /* Pretendard-ExtraLight.otf */,
+				098B559D29E2879E00495CEC /* Pretendard-Light.otf */,
+				098B559E29E2879E00495CEC /* Pretendard-Medium.otf */,
+				098B559C29E2879E00495CEC /* Pretendard-Regular.otf */,
+				098B55A129E2879F00495CEC /* Pretendard-SemiBold.otf */,
+				098B559F29E2879F00495CEC /* Pretendard-Thin.otf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		098B55AB29E28D0800495CEC /* img */ = {
+			isa = PBXGroup;
+			children = (
+				098B55B029E28D3700495CEC /* btn_before.png */,
+				098B55AF29E28D3700495CEC /* eye-slash.png */,
+				098B55B329E28D3800495CEC /* image1.png */,
+				098B55B129E28D3700495CEC /* x-circle.png */,
+				09EBA58C29EE9C2100546B5A /* eye.png */,
+				09EBA59029EFD4BD00546B5A /* Rectangle.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +295,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0941D49629E0307000B582B0 /* LaunchScreen.storyboard in Resources */,
+				098B55A829E2879F00495CEC /* Pretendard-Thin.otf in Resources */,
+				098B55A629E2879F00495CEC /* Pretendard-Light.otf in Resources */,
+				098B55AA29E2879F00495CEC /* Pretendard-SemiBold.otf in Resources */,
+				098B55A329E2879F00495CEC /* Pretendard-Bold.otf in Resources */,
 				0941D49329E0307000B582B0 /* Assets.xcassets in Resources */,
+				098B55A229E2879F00495CEC /* Pretendard-ExtraLight.otf in Resources */,
+				098B55A929E2879F00495CEC /* Pretendard-ExtraBold.otf in Resources */,
+				098B55A529E2879F00495CEC /* Pretendard-Regular.otf in Resources */,
+				098B55A429E2879F00495CEC /* Pretendard-Black.otf in Resources */,
+				09EBA58D29EE9C2100546B5A /* eye.png in Resources */,
+				098937E629E267A400B9ABDC /* PretendardVariable.ttf in Resources */,
+				098B55A729E2879F00495CEC /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,18 +317,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098B55B929E3C80B00495CEC /* Welcome_tvingView.swift in Sources */,
 				09AF2E5C29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift in Sources */,
+				09EBA58729EE68A400546B5A /* UILabel+.swift in Sources */,
 				0987379A29E03F3400FE8DAB /* ViewController3.swift in Sources */,
+				09EBA58529EE620100546B5A /* CreateNickname_tvingView.swift in Sources */,
 				0987379829E03F3400FE8DAB /* ViewController.swift in Sources */,
 				0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */,
+				09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */,
 				0941D48C29E0306F00B582B0 /* SceneDelegate.swift in Sources */,
 				0987379929E03F3400FE8DAB /* ViewController4.swift in Sources */,
+				09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */,
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
+				0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */,
+				098B559829E26A0500495CEC /* UIFont+.swift in Sources */,
 				09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */,
 				09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */,
 				09AF2E6829E1439400D435F5 /* FirstViewController_button.swift in Sources */,
 				0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */,
+				098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */,
 				09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */,
+				098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */,
+				0993BE1929F13205000B490B /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
