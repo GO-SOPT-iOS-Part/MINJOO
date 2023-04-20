@@ -16,13 +16,13 @@ enum loginButtonStatus: String {
     case unable
     
     var backgroundColor: UIColor {
-            switch self {
-            case .enable:
-                return .tvingRed
-            case .unable:
-                return .tvingBlack
-            }
+        switch self {
+        case .enable:
+            return .tvingRed
+        case .unable:
+            return .tvingBlack
         }
+    }
     
     var titleColor: UIColor {
         switch self {
@@ -135,7 +135,7 @@ final class Auth_tvingView: UIViewController {
                      for: .touchUpInside)
         $0.isHidden = true
     }
-
+    
     private lazy var deletePasswordButton = UIButton().then {
         $0.setImage(UIImage(named: "x-circle"), for: .normal)
         $0.addTarget(self, action: #selector(deletePassword),
@@ -210,12 +210,16 @@ final class Auth_tvingView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         idTextField.delegate = self
         passwordTextField.delegate = self
         
         style()
         setLayout()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
 
@@ -306,7 +310,7 @@ private extension Auth_tvingView {
         }
         
         makeNickname.snp.makeConstraints {
-            $0.top.equalTo(426)
+            $0.top.equalTo(423)
             $0.leading.equalTo(197)
             $0.width.equalTo(128)
             $0.height.equalTo(22)
@@ -332,10 +336,13 @@ private extension Auth_tvingView {
         textFieldStatus(status: .unable)
     }
     
+    
+    
     // MARK: textField를 검사해서 deleteButton을 표시/삭제 하고, 로그인하기 버튼을 활성화한다.
+    
     @objc func textFieldDidChange(textField: UITextField){
         guard let idText = self.idTextField.text  else {return}
-        guard let pwText = self.passwordTextField.text  else {return}
+        guard let passwordText = self.passwordTextField.text  else {return}
         
         switch textField {
         case idTextField:
@@ -346,7 +353,7 @@ private extension Auth_tvingView {
                 deleteIdButton.isHidden = false
             }
         case passwordTextField:
-            if pwText.isEmpty {
+            if passwordText.isEmpty {
                 deletePasswordButton.isHidden = true
             }
             else {
@@ -355,18 +362,20 @@ private extension Auth_tvingView {
         default: break
         }
         
-        if !idText.isEmpty && !pwText.isEmpty {
+        if !idText.isEmpty && !passwordText.isEmpty && idText.isValidEmail() {
             textFieldStatus(status: .enable)
         } else {
             textFieldStatus(status: .unable)
             
-
+            
+        }
     }
-}
-    // MARK: 패스워드 보이기
+    
+    // MARK: 패스워드 보이기, eyeButton 바꾸기
     @objc
     func showPassword() {
         passwordTextField.isSecureTextEntry.toggle()
+        
         if passwordTextField.isSecureTextEntry {
             eyeButton.setImage(UIImage(named: "eye-slash"), for: .normal)
         } else {
@@ -384,8 +393,7 @@ private extension Auth_tvingView {
         }
         let SecondViewController = Welcome_tvingView()
         SecondViewController.text = text
-        SecondViewController.modalPresentationStyle = .fullScreen
-        self.present(SecondViewController, animated: true)
+        self.navigationController?.pushViewController(SecondViewController, animated: true)
         passwordTextField.makeBorder(width: 0, color: .gray3)
     }
     
@@ -409,11 +417,9 @@ extension Auth_tvingView: nicknameProtocol {
 
 extension Auth_tvingView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        guard let id = idTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        
-        if !id.isEmpty && !password.isEmpty {
+        guard let idText = self.idTextField.text  else {return}
+        guard let passwordText = self.passwordTextField.text  else {return}
+        if !idText.isEmpty && !passwordText.isEmpty && idText.isValidEmail() {
             textFieldStatus(status: .enable)
         } else {
             textFieldStatus(status: .unable)
@@ -434,19 +440,13 @@ extension Auth_tvingView: UITextFieldDelegate {
             eyeButtonStatus(status: .show)
         }
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
         
         deleteIdButtonStatus(status: .notShow)
         deletePasswordButtonStatus(status: .notShow)
         eyeButtonStatus(status: .notShow)
-        
-        if idTextField.hasText && passwordTextField.hasText {
-            textFieldStatus(status: .enable)
-        } else {
-            textFieldStatus(status: .unable)
-        }
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -464,12 +464,20 @@ extension Auth_tvingView: UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        super.touchesBegan(touches, with: event) //
+        super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
         deleteIdButtonStatus(status: .notShow)
         deletePasswordButtonStatus(status: .notShow)
         eyeButtonStatus(status: .notShow)
     }
+    
+}
 
+extension String {
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{0,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: self)
+    }
 }
 

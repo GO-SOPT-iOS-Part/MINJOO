@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				098937E029E25C0000B9ABDC /* Auth_tvingView.swift */,
-				098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */,
 				09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */,
+				098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */,
 				0987E80329E52DE20082CCD2 /* Main_tvingView.swift */,
 			);
 			path = VC;

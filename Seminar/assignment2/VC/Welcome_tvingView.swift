@@ -48,6 +48,10 @@ final class Welcome_tvingView: UIViewController {
         style()
         setLayout()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
 }
 
 private extension Welcome_tvingView {
