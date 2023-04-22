@@ -40,6 +40,20 @@
 		09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */; };
 		09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E6D29E156E700D435F5 /* uibutton+.swift */; };
 		09AF2E7229E245ED00D435F5 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 09AF2E7129E245ED00D435F5 /* Inject */; };
+		09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */; };
+		09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */; };
+		09DFCE6429F3AC230065B782 /* BaseView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6329F3AC230065B782 /* BaseView2.swift */; };
+		09DFCE6629F3B1650065B782 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6529F3B1650065B782 /* CarrotViewController.swift */; };
+		09DFCE6A29F3B27C0065B782 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6929F3B27C0065B782 /* CarrotTableViewCell.swift */; };
+		09DFCE6C29F3B36C0065B782 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */; };
+		09DFCE6E29F3B5150065B782 /* TradeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6D29F3B5150065B782 /* TradeEnum.swift */; };
+		09DFCE7029F3B54F0065B782 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6F29F3B54F0065B782 /* Carrot.swift */; };
+		09DFCE7729F3B68B0065B782 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE7629F3B68B0065B782 /* Image.swift */; };
+		09DFCE7929F3B8BB0065B782 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE7829F3B8BB0065B782 /* UIView+extension.swift */; };
+		09DFCE7F29F3BF620065B782 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE7E29F3BF620065B782 /* UIImage+.swift */; };
+		09DFCE8129F3BFA50065B782 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE8029F3BFA50065B782 /* PhotoCell.swift */; };
+		09DFCE8329F3BFCD0065B782 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE8229F3BFCD0065B782 /* PhotoViewController.swift */; };
+		09DFCE8529F3C2550065B782 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE8429F3C2550065B782 /* Photo.swift */; };
 		09EBA58529EE620100546B5A /* CreateNickname_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */; };
 		09EBA58729EE68A400546B5A /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58629EE68A400546B5A /* UILabel+.swift */; };
 		09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EBA58829EE68CB00546B5A /* UITextField+.swift */; };
@@ -84,6 +98,20 @@
 		09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_button.swift; sourceTree = "<group>"; };
 		09AF2E6B29E14FED00D435F5 /* FirstViewController_colorbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_colorbox.swift; sourceTree = "<group>"; };
 		09AF2E6D29E156E700D435F5 /* uibutton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "uibutton+.swift"; sourceTree = "<group>"; };
+		09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView_DelegatePattern.swift; sourceTree = "<group>"; };
+		09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
+		09DFCE6329F3AC230065B782 /* BaseView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView2.swift; sourceTree = "<group>"; };
+		09DFCE6529F3B1650065B782 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
+		09DFCE6929F3B27C0065B782 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		09DFCE6D29F3B5150065B782 /* TradeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeEnum.swift; sourceTree = "<group>"; };
+		09DFCE6F29F3B54F0065B782 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
+		09DFCE7629F3B68B0065B782 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		09DFCE7829F3B8BB0065B782 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		09DFCE7E29F3BF620065B782 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		09DFCE8029F3BFA50065B782 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		09DFCE8229F3BFCD0065B782 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		09DFCE8429F3C2550065B782 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNickname_tvingView.swift; sourceTree = "<group>"; };
 		09EBA58629EE68A400546B5A /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		09EBA58829EE68CB00546B5A /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -109,6 +137,7 @@
 		0941D47D29E0306F00B582B0 = {
 			isa = PBXGroup;
 			children = (
+				09DFCE5C29F3A6B40065B782 /* feat3 */,
 				098937DF29E25BD400B9ABDC /* assignment2 */,
 				098937DD29E25B8700B9ABDC /* feat1 */,
 				098937DE29E25BAA00B9ABDC /* feat2 */,
@@ -176,6 +205,9 @@
 			isa = PBXGroup;
 			children = (
 				09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */,
+				09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */,
+				09DFCE6329F3AC230065B782 /* BaseView2.swift */,
+				09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */,
 				09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */,
 				09AF2E6729E1439400D435F5 /* FirstViewController_button.swift */,
 				09AF2E6929E143A500D435F5 /* SecondViewController_button.swift */,
@@ -224,6 +256,48 @@
 				09EBA59029EFD4BD00546B5A /* Rectangle.png */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		09DFCE5C29F3A6B40065B782 /* feat3 */ = {
+			isa = PBXGroup;
+			children = (
+				09DFCE7B29F3BD9C0065B782 /* CollectionView */,
+				09DFCE7A29F3BD150065B782 /* Carrot */,
+				09DFCE7529F3B6730065B782 /* Extension */,
+			);
+			path = feat3;
+			sourceTree = "<group>";
+		};
+		09DFCE7529F3B6730065B782 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				09DFCE7829F3B8BB0065B782 /* UIView+extension.swift */,
+				09DFCE7629F3B68B0065B782 /* Image.swift */,
+				09DFCE7E29F3BF620065B782 /* UIImage+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		09DFCE7A29F3BD150065B782 /* Carrot */ = {
+			isa = PBXGroup;
+			children = (
+				09DFCE6529F3B1650065B782 /* CarrotViewController.swift */,
+				09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */,
+				09DFCE6929F3B27C0065B782 /* CarrotTableViewCell.swift */,
+				09DFCE6D29F3B5150065B782 /* TradeEnum.swift */,
+				09DFCE6F29F3B54F0065B782 /* Carrot.swift */,
+			);
+			path = Carrot;
+			sourceTree = "<group>";
+		};
+		09DFCE7B29F3BD9C0065B782 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				09DFCE8229F3BFCD0065B782 /* PhotoViewController.swift */,
+				09DFCE8029F3BFA50065B782 /* PhotoCell.swift */,
+				09DFCE8429F3C2550065B782 /* Photo.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,27 +392,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				098B55B929E3C80B00495CEC /* Welcome_tvingView.swift in Sources */,
+				09DFCE6429F3AC230065B782 /* BaseView2.swift in Sources */,
 				09AF2E5C29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift in Sources */,
+				09DFCE7F29F3BF620065B782 /* UIImage+.swift in Sources */,
+				09DFCE6629F3B1650065B782 /* CarrotViewController.swift in Sources */,
+				09DFCE8329F3BFCD0065B782 /* PhotoViewController.swift in Sources */,
 				09EBA58729EE68A400546B5A /* UILabel+.swift in Sources */,
+				09DFCE7929F3B8BB0065B782 /* UIView+extension.swift in Sources */,
+				09DFCE7029F3B54F0065B782 /* Carrot.swift in Sources */,
 				0987379A29E03F3400FE8DAB /* ViewController3.swift in Sources */,
 				09EBA58529EE620100546B5A /* CreateNickname_tvingView.swift in Sources */,
 				0987379829E03F3400FE8DAB /* ViewController.swift in Sources */,
+				09DFCE8529F3C2550065B782 /* Photo.swift in Sources */,
 				0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */,
 				09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */,
 				0941D48C29E0306F00B582B0 /* SceneDelegate.swift in Sources */,
 				0987379929E03F3400FE8DAB /* ViewController4.swift in Sources */,
 				09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */,
+				09DFCE6E29F3B5150065B782 /* TradeEnum.swift in Sources */,
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
 				0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */,
 				098B559829E26A0500495CEC /* UIFont+.swift in Sources */,
+				09DFCE8129F3BFA50065B782 /* PhotoCell.swift in Sources */,
 				09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */,
 				09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */,
+				09DFCE7729F3B68B0065B782 /* Image.swift in Sources */,
 				09AF2E6829E1439400D435F5 /* FirstViewController_button.swift in Sources */,
 				0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */,
 				098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */,
+				09DFCE6A29F3B27C0065B782 /* CarrotTableViewCell.swift in Sources */,
+				09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */,
 				09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */,
+				09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */,
 				098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */,
 				0993BE1929F13205000B490B /* UIView+.swift in Sources */,
+				09DFCE6C29F3B36C0065B782 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
