@@ -126,21 +126,13 @@ extension MyPage_ViewController: UITableViewDataSource {
         case 1: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "LogOutButtonFooter")
         default: return nil
         }
-//        return tableView.dequeueReusableHeaderFooterView(withIdentifier: "SeparatorTableViewFooter")
     }
-//
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             guard section == 0, let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MyTableViewHeader") as? MyTableViewHeader else { return nil }
 
             let tapGesture = UITapGestureRecognizer()
             headerCell.addGestureRecognizer(tapGesture)
-//            tapGesture.rx.event
-//                .asDriver()
-//                .drive(onNext: { _ in
-//                    print("did tap first header")
-//                }).disposed(by: headerCell.disposeBag)
-
             return headerCell
         }
     
@@ -148,7 +140,7 @@ extension MyPage_ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
             // Header 영역 크기 = 140(separator 상단) + 12(separator 하단)
 
-            return section == 0 ? 300 : 0
+            return section == 0 ? 280 : 0
         }
 
     

@@ -16,12 +16,24 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
     private lazy var mySubscribeContainer = UIView().then {
         $0.backgroundColor = .gray100
         $0.layer.cornerRadius = 3
+//        $0.isLayoutMarginsRelativeArrangement = true
+        $0.layoutMargins = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 20.0, right: 0.0)
         
     }
     
-    private lazy var subscribe = UIView().then {
-        $0.backgroundColor = .blue
+    private lazy var subscribe = UIButton().then {
+        $0.backgroundColor = .gray100
         $0.layer.cornerRadius = 3
+        
+        $0.titleLabel?.numberOfLines = 2
+        $0.setTitle("이용권을 구매하고 \t\t    등 인기 TV프로그램과\n다양한 영화 콘텐츠를 자유롭게 시청하세요!", for: .normal)
+        $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Semibold", size: 12)
+        $0.titleLabel?.sizeToFit()
+        $0.titleLabel?.textColor = .gray612
+        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        $0.titleLabel?.setLineSpacing(spacing: 1.4)
+        $0.alignVerticalCenter()
         
     }
     private lazy var mySubscribe = UIView()
@@ -39,7 +51,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         $0.titleLabel?.font = UIFont(name: "Pretendard-Semibold", size: 20)
         $0.titleLabel?.sizeToFit()
-        $0.titleLabel?.textColor = .tvingWhite
+        $0.setTitleColor(.tvingWhite, for: .normal)
     }
     lazy var editProfileButton = UIButton().then {
         $0.setImage(UIImage(named: "editProfile"), for: .normal)
@@ -78,17 +90,17 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         $0.textColor = .gray560
     }
     
-    private lazy var usingTickets = UIButton().then {
-        $0.setTitle("사용중인 이용권이 없습니다.", for: .normal)
-        
-        $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
-        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 13)
-        $0.titleLabel?.textColor = .gray384
-    }
+    private let usingTickets: UIButton = {
+        let button = UIButton()
+        button.setTitle("사용중인 이용권이 없습니다.", for: .normal)
+        button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
+        button.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 13)
+        button.setTitleColor(.gray384, for: .normal)
+        return button
+    }()
     
     private lazy var myTvingCash = UILabel().then {
         $0.text = "0"
-        
         $0.textColor = .tvingWhite
         $0.font = UIFont(name: "Pretendard-Bold", size: 15)
     }
@@ -124,20 +136,20 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.width.equalToSuperview()
         }
         mySubscribeContainer.snp.makeConstraints {
-            $0.top.equalTo(self.profileContainer.snp.bottom).inset(-29)
+            $0.top.equalTo(self.profileContainer.snp.bottom).inset(-25)
             $0.height.equalTo(92)
-            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.leading.trailing.equalToSuperview().inset(5)
             //            $0.height.equalTo(300)
         }
         
         subscribe.snp.makeConstraints {
-            $0.top.equalTo(self.mySubscribeContainer.snp.bottom).inset(-12)
+            $0.top.equalTo(self.mySubscribeContainer.snp.bottom).inset(-10)
             $0.height.equalTo(60)
-            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.leading.trailing.equalToSuperview().inset(5)
         }
         profileImage.snp.makeConstraints {
             $0.centerY.equalTo(self.profileContainer.snp.centerY)
-            $0.leading.equalTo(10)
+            $0.leading.equalTo(5)
             $0.width.equalTo(72)
             $0.height.equalTo(74)
         }
@@ -155,7 +167,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         switchProfileButton.snp.makeConstraints {
             $0.centerY.equalTo(self.profileImage.snp.centerY)
             
-            $0.trailing.equalToSuperview().inset(10)
+            $0.trailing.equalToSuperview().inset(5)
             $0.width.equalTo(85)
             $0.height.equalTo(30)
         }
@@ -176,22 +188,22 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         
         myTicketsIcon.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(11)
-            $0.height.width.equalTo(23)
+            $0.leading.equalToSuperview().inset(15)
+            $0.height.width.equalTo(17)
         }
         tvingCashIcon.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(11)
-            $0.height.width.equalTo(23)
+            $0.leading.equalToSuperview().inset(15)
+            $0.height.width.equalTo(17)
         }
         
         myTicketsLabel.snp.makeConstraints {
-            $0.leading.equalTo(self.myTicketsIcon.snp.trailing).inset(-10)
+            $0.leading.equalTo(self.myTicketsIcon.snp.trailing).inset(-7)
             
             $0.centerY.equalToSuperview()
         }
         tvingCashLabel.snp.makeConstraints {
-            $0.leading.equalTo(self.tvingCashIcon.snp.trailing).inset(-10)
+            $0.leading.equalTo(self.tvingCashIcon.snp.trailing).inset(-7)
             
             $0.centerY.equalToSuperview()
         }
@@ -199,7 +211,6 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         usingTickets.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(18)
             $0.width.equalTo(240)
-            
             $0.centerY.equalToSuperview()
         }
         myTvingCash.snp.makeConstraints {
