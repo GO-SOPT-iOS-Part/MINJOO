@@ -123,15 +123,12 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
     }
     
     private func addSubviews() {
-        addSubviews(profileContainer, mySubscribeContainer, subscribe)
-        
-        subscribe.addSubviews(jtbcIcon, tvnIcon, buttonImage)
-        
-        profileContainer.addSubviews(profileImage, nameLabel, switchProfileButton, editProfileButton)
-        
-        mySubscribeContainer.addSubviews(mySubscribe, tvingCash)
-        mySubscribe.addSubviews(myTicketsLabel, myTicketsIcon, usingTickets)
-        tvingCash.addSubviews(tvingCashIcon, tvingCashLabel, myTvingCash)
+        addSubviews ( profileContainer, mySubscribeContainer, subscribe )
+        profileContainer.addSubviews ( profileImage, nameLabel, editProfileButton, switchProfileButton )
+        mySubscribe.addSubviews ( myTicketsLabel, myTicketsIcon, usingTickets )
+        tvingCash.addSubviews ( tvingCashIcon, tvingCashLabel, myTvingCash )
+        mySubscribeContainer.addSubviews ( mySubscribe, tvingCash )
+        subscribe.addSubviews ( jtbcIcon, tvnIcon, buttonImage )
     }
     
     private func makeConstraints() {
@@ -143,7 +140,6 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.top.equalTo(self.profileContainer.snp.bottom).inset(-25)
             $0.height.equalTo(92)
             $0.leading.trailing.equalToSuperview().inset(5)
-            //            $0.height.equalTo(300)
         }
         
         subscribe.snp.makeConstraints {
@@ -152,27 +148,27 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.leading.trailing.equalToSuperview().inset(5)
         }
         
-        
         profileImage.snp.makeConstraints {
             $0.centerY.equalTo(self.profileContainer.snp.centerY)
             $0.leading.equalTo(5)
             $0.width.equalTo(72)
             $0.height.equalTo(74)
         }
+        
         nameLabel.snp.makeConstraints {
             $0.centerY.equalTo(self.profileImage.snp.centerY)
-            
             $0.leading.equalTo(self.profileImage.snp.trailing).inset(-17)
             $0.height.equalTo(22)
         }
+        
         editProfileButton.snp.makeConstraints {
             $0.leading.equalTo(self.nameLabel.snp.trailing).inset(-5)
             $0.centerY.equalTo(self.profileImage.snp.centerY)
             $0.width.height.equalTo(14)
         }
+        
         switchProfileButton.snp.makeConstraints {
             $0.centerY.equalTo(self.profileImage.snp.centerY)
-            
             $0.trailing.equalToSuperview().inset(5)
             $0.width.equalTo(85)
             $0.height.equalTo(30)
@@ -184,6 +180,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.top.equalToSuperview()
             $0.height.equalToSuperview().multipliedBy(1.0/2.0)
         }
+        
         tvingCash.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.width.equalToSuperview()
@@ -197,6 +194,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.leading.equalToSuperview().inset(15)
             $0.height.width.equalTo(17)
         }
+        
         tvingCashIcon.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().inset(15)
@@ -208,6 +206,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             
             $0.centerY.equalToSuperview()
         }
+        
         tvingCashLabel.snp.makeConstraints {
             $0.leading.equalTo(self.tvingCashIcon.snp.trailing).inset(-7)
             
@@ -219,15 +218,10 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.width.equalTo(240)
             $0.centerY.equalToSuperview()
         }
+        
         myTvingCash.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(18)
-            
             $0.centerY.equalToSuperview()
-        }
-        tvnIcon.snp.makeConstraints {
-            $0.width.equalTo(25)
-            $0.leading.equalToSuperview().inset(105)
-            $0.top.equalToSuperview().inset(17)
         }
         
         jtbcIcon.snp.makeConstraints {
@@ -235,13 +229,19 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             $0.leading.equalToSuperview().inset(128)
             $0.top.equalToSuperview().inset(3)
         }
+        
+        tvnIcon.snp.makeConstraints {
+            $0.width.equalTo(25)
+            $0.leading.equalToSuperview().inset(105)
+            $0.top.equalToSuperview().inset(17)
+        }
+        
         buttonImage.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(18.86)
             $0.centerY.equalToSuperview()
             $0.width.equalTo(18)
             $0.height.equalTo(16.5)
         }
-        
     }
 }
 

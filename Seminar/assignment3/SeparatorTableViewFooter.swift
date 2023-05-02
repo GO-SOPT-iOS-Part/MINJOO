@@ -14,10 +14,7 @@ import Then
 class SeparatorTableViewFooter: BaseTableViewHeaderFooterView<Void> {
 
     lazy var separatorView = UIView().then {
-
         $0.backgroundColor = .gray180
-        
-
     }
 
     override func configure() {

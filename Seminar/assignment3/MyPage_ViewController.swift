@@ -51,11 +51,6 @@ final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate 
     
     // MARK : navigation Bar
     
-    private let backButton = UIButton()
-    private let alarmButton = UIButton()
-    private let settingButton = UIButton()
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -81,55 +76,61 @@ final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate 
         
         self.navigationController?.isNavigationBarHidden = false
         
-        backButton.setImage(UIImage(named: "btn_before"), for: .normal)
+        lazy var backButton = UIButton().then {
+            $0.setImage(UIImage(named: "btn_before"), for: .normal)
+            $0.addTarget(self, action: #selector(goToMainPage), for: .touchUpInside)
+        }
+        let back = UIBarButtonItem(customView: backButton)
+        
+        lazy var alarmButton = UIButton().then {
+            $0.setImage(UIImage(named: "MyPage_bell")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            $0.tintColor = UIColor.gray490
+        }
+        
+        lazy var settingButton = UIButton().then {
+            $0.setImage(UIImage(named: "MyPage_settings")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            $0.tintColor = UIColor.gray490
+        }
+        
         backButton.snp.makeConstraints {
             $0.width.equalTo(8)
             $0.height.equalTo(15)
         }
-        backButton.addTarget(self,
-                             action: #selector(goToMainPage),
-                             for: .touchUpInside)
-        let back = UIBarButtonItem(customView: backButton)
         
-        alarmButton.setImage(UIImage(named: "MyPage_bell")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        alarmButton.tintColor = UIColor.gray490
         alarmButton.snp.makeConstraints {
             $0.width.equalTo(30)
             $0.height.equalTo(42)
         }
-        
-        settingButton.setImage(UIImage(named: "MyPage_settings")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        settingButton.tintColor = UIColor.gray490
-        
         settingButton.snp.makeConstraints {
             $0.width.equalTo(33)
             $0.height.equalTo(31)
         }
         
-        let righthStackview = UIStackView.init(arrangedSubviews: [alarmButton, settingButton])
-        righthStackview.distribution = .equalSpacing
-        righthStackview.axis = .horizontal
-        righthStackview.alignment = .center
-        righthStackview.spacing = 10
-        let rightStackBarButtonItem = UIBarButtonItem(customView: righthStackview)
-        
-        navigationItem.leftBarButtonItem = back
-        navigationItem.rightBarButtonItem = rightStackBarButtonItem
+        let righthStackview = UIStackView.init(arrangedSubviews: [alarmButton, settingButton]).then {
+            $0.distribution = .equalSpacing
+            $0.axis = .horizontal
+            $0.alignment = .center
+            $0.spacing = 10
+            
+            let rightStackBarButtonItem = UIBarButtonItem(customView: $0)
+            navigationItem.leftBarButtonItem = back
+            navigationItem.rightBarButtonItem = rightStackBarButtonItem
+        }
     }
     
     @objc
     func goToMainPage() {
-        let transition = CATransition()
-        transition.duration = 0.25
-        transition.type = .push
-        transition.subtype = .fromLeft
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        let transition = CATransition().then {
+            $0.duration = 0.25
+            $0.type = .push
+            $0.subtype = .fromLeft
+            $0.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        }
         view.window?.layer.add(transition, forKey: kCATransition)
         dismiss(animated: false)
         let mainViewController = MainPage_ViewController()
         self.navigationController?.pushViewController(mainViewController, animated: false)
     }
-    
 }
 
 extension MyPage_ViewController: UITableViewDataSource {
@@ -162,7 +163,6 @@ extension MyPage_ViewController: UITableViewDataSource {
         return list[section].header
         
     }
-    
 
     // MARK : Header, Footer
     
@@ -182,21 +182,11 @@ extension MyPage_ViewController: UITableViewDataSource {
         return headerCell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 280 : 0
     }
     
-    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return section == 1 ? 100 : 33
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
