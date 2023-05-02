@@ -119,8 +119,15 @@ final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate 
     
     @objc
     func goToMainPage() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = .push
+        transition.subtype = .fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        view.window?.layer.add(transition, forKey: kCATransition)
+        dismiss(animated: false)
         let mainViewController = MainPage_ViewController()
-        self.navigationController?.pushViewController(mainViewController, animated: true)
+        self.navigationController?.pushViewController(mainViewController, animated: false)
     }
     
 }
