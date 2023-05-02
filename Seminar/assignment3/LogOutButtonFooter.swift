@@ -15,8 +15,8 @@ class LogOutButtonFooter: BaseTableViewHeaderFooterView<Void> {
 
     lazy var LogoutButton = UIButton().then {
         $0.setTitle("로그아웃", for: .normal)
-        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 14)
-        $0.titleLabel?.textColor = .gray612
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 15)
+        $0.titleLabel?.textColor = .gray560
         $0.layer.borderColor = UIColor.gray180.cgColor
         $0.layer.borderWidth = 1
     }

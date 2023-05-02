@@ -30,19 +30,30 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         $0.titleLabel?.font = UIFont(name: "Pretendard-Semibold", size: 12)
         $0.titleLabel?.sizeToFit()
-        $0.titleLabel?.textColor = .gray612
-        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 0)
+        $0.setTitleColor(.gray612, for: .normal)
         $0.titleLabel?.setLineSpacing(spacing: 1.4)
-        $0.alignVerticalCenter()
+        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        $0.titleEdgeInsets = UIEdgeInsets(top: 0, left:0, bottom: 6, right: 0)
         
     }
+    
+    private let jtbcIcon = UIImageView().then {
+        $0.image = UIImage(named: "JTBC")
+    }
+    private let tvnIcon = UIImageView().then {
+        $0.image = UIImage(named: "TVN")
+    }
+    private let buttonImage = UIImageView().then {
+        $0.image = UIImage(named: "MyPageButtonImage")
+    }
+    
     private lazy var mySubscribe = UIView()
     
     private lazy var tvingCash = UIView()
     
     private lazy var profileImage = UIImageView ().then {
         $0.image = UIImage(named: "profileImage")
-        $0.layer.cornerRadius = 5
+        $0.layer.cornerRadius = 3
         $0.backgroundColor = .gray180
         
     }
@@ -90,14 +101,12 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         $0.textColor = .gray560
     }
     
-    private let usingTickets: UIButton = {
-        let button = UIButton()
-        button.setTitle("사용중인 이용권이 없습니다.", for: .normal)
-        button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
-        button.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 13)
-        button.setTitleColor(.gray384, for: .normal)
-        return button
-    }()
+    private let usingTickets = UIButton().then {
+        $0.setTitle("사용중인 이용권이 없습니다.", for: .normal)
+        $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 13)
+        $0.setTitleColor(.gray384, for: .normal)
+    }
     
     private lazy var myTvingCash = UILabel().then {
         $0.text = "0"
@@ -114,17 +123,12 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
     }
     
     private func addSubviews() {
-        addSubview(profileContainer)
+        addSubviews(profileContainer, mySubscribeContainer, subscribe)
         
-        addSubview(mySubscribeContainer)
+        subscribe.addSubviews(jtbcIcon, tvnIcon, buttonImage)
         
-        addSubview(subscribe)
+        profileContainer.addSubviews(profileImage, nameLabel, switchProfileButton, editProfileButton)
         
-        
-        profileContainer.addSubview(profileImage)
-        
-        
-        profileContainer.addSubviews(nameLabel, switchProfileButton, editProfileButton)
         mySubscribeContainer.addSubviews(mySubscribe, tvingCash)
         mySubscribe.addSubviews(myTicketsLabel, myTicketsIcon, usingTickets)
         tvingCash.addSubviews(tvingCashIcon, tvingCashLabel, myTvingCash)
@@ -144,9 +148,11 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         
         subscribe.snp.makeConstraints {
             $0.top.equalTo(self.mySubscribeContainer.snp.bottom).inset(-10)
-            $0.height.equalTo(60)
+            $0.height.equalTo(65)
             $0.leading.trailing.equalToSuperview().inset(5)
         }
+        
+        
         profileImage.snp.makeConstraints {
             $0.centerY.equalTo(self.profileContainer.snp.centerY)
             $0.leading.equalTo(5)
@@ -218,6 +224,24 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
             
             $0.centerY.equalToSuperview()
         }
+        tvnIcon.snp.makeConstraints {
+            $0.width.equalTo(25)
+            $0.leading.equalToSuperview().inset(105)
+            $0.top.equalToSuperview().inset(17)
+        }
+        
+        jtbcIcon.snp.makeConstraints {
+            $0.width.equalTo(40)
+            $0.leading.equalToSuperview().inset(128)
+            $0.top.equalToSuperview().inset(3)
+        }
+        buttonImage.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(18.86)
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(18)
+            $0.height.equalTo(16.5)
+        }
+        
     }
 }
 

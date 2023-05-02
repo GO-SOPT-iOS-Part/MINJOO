@@ -42,9 +42,9 @@
 		099C409E29FB583900B2CAFA /* MyPage_ViewControllor(backup).swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C409D29FB583900B2CAFA /* MyPage_ViewControllor(backup).swift */; };
 		099C40A029FB7B1600B2CAFA /* MyPage_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C409F29FB7B1600B2CAFA /* MyPage_View.swift */; };
 		099C40A629FFE10A00B2CAFA /* SeparatorTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C40A529FFE10A00B2CAFA /* SeparatorTableViewFooter.swift */; };
-		099C40A829FFE3FB00B2CAFA /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C40A729FFE3FB00B2CAFA /* NavigationBar.swift */; };
 		099C40AA29FFEA9100B2CAFA /* MyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C40A929FFEA9100B2CAFA /* MyTableViewHeader.swift */; };
 		099C40AC29FFFA1C00B2CAFA /* LogOutButtonFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C40AB29FFFA1C00B2CAFA /* LogOutButtonFooter.swift */; };
+		099C40AE2A010B4800B2CAFA /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C40AD2A010B4800B2CAFA /* NavigationBar+.swift */; };
 		09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */; };
 		09AF2E5C29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */; };
 		09AF2E6329E141ED00D435F5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 09AF2E6229E141ED00D435F5 /* SnapKit */; };
@@ -117,9 +117,9 @@
 		099C409D29FB583900B2CAFA /* MyPage_ViewControllor(backup).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyPage_ViewControllor(backup).swift"; sourceTree = "<group>"; };
 		099C409F29FB7B1600B2CAFA /* MyPage_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage_View.swift; sourceTree = "<group>"; };
 		099C40A529FFE10A00B2CAFA /* SeparatorTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorTableViewFooter.swift; sourceTree = "<group>"; };
-		099C40A729FFE3FB00B2CAFA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		099C40A929FFEA9100B2CAFA /* MyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewHeader.swift; sourceTree = "<group>"; };
 		099C40AB29FFFA1C00B2CAFA /* LogOutButtonFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonFooter.swift; sourceTree = "<group>"; };
+		099C40AD2A010B4800B2CAFA /* NavigationBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+.swift"; sourceTree = "<group>"; };
 		09AF2E5929E132F100D435F5 /* FirstViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_DelegatePattern.swift; sourceTree = "<group>"; };
 		09AF2E5B29E1332B00D435F5 /* SecondViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_DelegatePattern.swift; sourceTree = "<group>"; };
 		09AF2E6729E1439400D435F5 /* FirstViewController_button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_button.swift; sourceTree = "<group>"; };
@@ -295,11 +295,11 @@
 				099C409629F920C100B2CAFA /* tvingBaseViewController.swift */,
 				099C408B29F6478000B2CAFA /* MyPage_ViewController.swift */,
 				099C40AB29FFFA1C00B2CAFA /* LogOutButtonFooter.swift */,
-				099C40A729FFE3FB00B2CAFA /* NavigationBar.swift */,
 				099C40A529FFE10A00B2CAFA /* SeparatorTableViewFooter.swift */,
 				099C409D29FB583900B2CAFA /* MyPage_ViewControllor(backup).swift */,
 				099C40A929FFEA9100B2CAFA /* MyTableViewHeader.swift */,
 				099C409229F90F5800B2CAFA /* MyPage_TableViewCell.swift */,
+				099C40AD2A010B4800B2CAFA /* NavigationBar+.swift */,
 				099C409829F976DB00B2CAFA /* MyPage_TabelViewCell2.swift */,
 				099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */,
 				099C409429F912A000B2CAFA /* MyPage.swift */,
@@ -478,6 +478,7 @@
 				099C409729F920C100B2CAFA /* tvingBaseViewController.swift in Sources */,
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
 				0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */,
+				099C40AE2A010B4800B2CAFA /* NavigationBar+.swift in Sources */,
 				098B559829E26A0500495CEC /* UIFont+.swift in Sources */,
 				099C409929F976DB00B2CAFA /* MyPage_TabelViewCell2.swift in Sources */,
 				099C409E29FB583900B2CAFA /* MyPage_ViewControllor(backup).swift in Sources */,
@@ -485,7 +486,6 @@
 				09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */,
 				09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */,
 				09DFCE7729F3B68B0065B782 /* Image.swift in Sources */,
-				099C40A829FFE3FB00B2CAFA /* NavigationBar.swift in Sources */,
 				09AF2E6829E1439400D435F5 /* FirstViewController_button.swift in Sources */,
 				0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */,
 				098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */,

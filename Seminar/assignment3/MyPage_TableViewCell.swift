@@ -59,7 +59,7 @@ final class MyPage_TableViewCell: UITableViewCell {
         }
         
         buttonImage.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(18.86)
+            $0.trailing.equalToSuperview().inset(15)
             $0.centerY.equalToSuperview()
             $0.width.equalTo(18)
             $0.height.equalTo(16.5)
