@@ -148,8 +148,8 @@ extension MyPage_ViewController: UITableViewDataSource {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.identifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
             cell.configureCell(list[0].items[indexPath.row])
-            
             return cell
+
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.identifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
             cell.configureCell(list[1].items[indexPath.row])
