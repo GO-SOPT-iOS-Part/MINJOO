@@ -10,7 +10,6 @@ import SnapKit
 import Then
 
 final class Welcome_tvingView: UIViewController {
-    
     public var text: String?
     
     private let tvingImage = UIImageView().then {
@@ -86,7 +85,10 @@ private extension Welcome_tvingView {
     
     @objc
     func goToMainVC() {
-        let mainViewController = Main_tvingView()
+        text = myLabel.text
+        let mainViewController = MainPage_ViewController()
+        mainViewController.text = text
         self.navigationController?.pushViewController(mainViewController, animated: true)
     }
 }
+

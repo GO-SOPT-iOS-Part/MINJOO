@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "btn_before.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "btn_before (2).png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "btn_before (1).png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "KakaoTalk_Photo_2023-05-04-22-41-39.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -12,8 +12,6 @@ import Then
 
 final class MyPage_TableViewCell: UITableViewCell {
     
-    static let identifier = "MyPageTableViewCell"
-    
     private lazy var label = UILabel()
     private lazy var buttonImage = UIImageView()
     private let horizontalStackView = UIStackView()
@@ -68,5 +66,12 @@ final class MyPage_TableViewCell: UITableViewCell {
     
     func configureCell(_ mypage: MyPage) {
         label.text = mypage.label
+    }
+}
+
+extension UITableViewCell{
+    
+    static var cellIdentifier : String {
+        return String(describing: self)
     }
 }

@@ -14,7 +14,6 @@ struct MyPage {
 
 struct SettingSection {
     let items: [MyPage]
-    let header: String?
     
     static func dummy() -> [SettingSection] {
         return [
@@ -22,12 +21,12 @@ struct SettingSection {
                                    MyPage(label: "1:1 문의내역"),
                                    MyPage(label: "예약알림"),
                                    MyPage(label: "회원정보 수정"),
-                                   MyPage(label: "프로모션 정보 수신 동의")], header: nil),
+                                   MyPage(label: "프로모션 정보 수신 동의")]),
             
             SettingSection(items: [MyPage(label: "공지사항"),
                                    MyPage(label: "이벤트"),
                                    MyPage(label: "고객센터"),
-                                   MyPage(label: "티빙 알아보기")], header: nil)
+                                   MyPage(label: "티빙 알아보기")])
         ]
     }
 }

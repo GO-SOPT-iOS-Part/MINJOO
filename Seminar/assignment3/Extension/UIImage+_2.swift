@@ -15,3 +15,4 @@ extension UIImage {
     static var poster_4: UIImage { UIImage(named: "poster_4")! }
     static var poster_5: UIImage { UIImage(named: "poster_5")! }
 }
+

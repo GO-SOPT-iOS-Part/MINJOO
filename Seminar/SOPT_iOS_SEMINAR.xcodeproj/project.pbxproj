@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0930482E2A027DDF007FA3DC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930482D2A027DDF007FA3DC /* CollectionViewController.swift */; };
+		093048302A027DEF007FA3DC /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930482F2A027DEF007FA3DC /* CollectionCell.swift */; };
+		093048322A027F22007FA3DC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048312A027F22007FA3DC /* Cell.swift */; };
+		093048392A02B66B007FA3DC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048382A02B66B007FA3DC /* MainViewController.swift */; };
+		0930483B2A02BAAF007FA3DC /* PagingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930483A2A02BAAF007FA3DC /* PagingTabBar.swift */; };
+		0930483D2A02BADC007FA3DC /* PagingTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930483C2A02BADC007FA3DC /* PagingTabBarCell.swift */; };
+		0930483F2A02BAF5007FA3DC /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930483E2A02BAF5007FA3DC /* PagingView.swift */; };
+		093048412A02BB13007FA3DC /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048402A02BB13007FA3DC /* PagingCollectionViewCell.swift */; };
+		093048462A03C90F007FA3DC /* MainPage_Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048452A03C90F007FA3DC /* MainPage_Home.swift */; };
+		093048482A03CA1C007FA3DC /* mainBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048472A03CA1C007FA3DC /* mainBaseViewController.swift */; };
+		0930484A2A04E21E007FA3DC /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048492A04E21E007FA3DC /* ViewController1.swift */; };
+		0930484C2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930484B2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift */; };
 		0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941D48929E0306F00B582B0 /* AppDelegate.swift */; };
 		0941D48C29E0306F00B582B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941D48B29E0306F00B582B0 /* SceneDelegate.swift */; };
 		0941D49329E0307000B582B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0941D49229E0307000B582B0 /* Assets.xcassets */; };
@@ -15,7 +27,6 @@
 		0987379929E03F3400FE8DAB /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379529E03F3400FE8DAB /* ViewController4.swift */; };
 		0987379A29E03F3400FE8DAB /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379629E03F3400FE8DAB /* ViewController3.swift */; };
 		0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987379729E03F3400FE8DAB /* ViewController2.swift */; };
-		0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0987E80329E52DE20082CCD2 /* Main_tvingView.swift */; };
 		098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098937E029E25C0000B9ABDC /* Auth_tvingView.swift */; };
 		098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098937E229E262BD00B9ABDC /* UIColor+.swift */; };
 		098937E629E267A400B9ABDC /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 098937E529E267A400B9ABDC /* PretendardVariable.ttf */; };
@@ -73,6 +84,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0930482D2A027DDF007FA3DC /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		0930482F2A027DEF007FA3DC /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		093048312A027F22007FA3DC /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		093048382A02B66B007FA3DC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0930483A2A02BAAF007FA3DC /* PagingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTabBar.swift; sourceTree = "<group>"; };
+		0930483C2A02BADC007FA3DC /* PagingTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTabBarCell.swift; sourceTree = "<group>"; };
+		0930483E2A02BAF5007FA3DC /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		093048402A02BB13007FA3DC /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		093048452A03C90F007FA3DC /* MainPage_Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage_Home.swift; sourceTree = "<group>"; };
+		093048472A03CA1C007FA3DC /* mainBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainBaseViewController.swift; sourceTree = "<group>"; };
+		093048492A04E21E007FA3DC /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		0930484B2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
 		0941D48629E0306F00B582B0 /* SOPT_iOS_SEMINAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_iOS_SEMINAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0941D48929E0306F00B582B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0941D48B29E0306F00B582B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +106,6 @@
 		0987379529E03F3400FE8DAB /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		0987379629E03F3400FE8DAB /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		0987379729E03F3400FE8DAB /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
-		0987E80329E52DE20082CCD2 /* Main_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_tvingView.swift; sourceTree = "<group>"; };
 		098937E029E25C0000B9ABDC /* Auth_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth_tvingView.swift; sourceTree = "<group>"; };
 		098937E229E262BD00B9ABDC /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		098937E529E267A400B9ABDC /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
@@ -156,6 +178,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093048332A02B3DD007FA3DC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				093048382A02B66B007FA3DC /* MainViewController.swift */,
+				0930483A2A02BAAF007FA3DC /* PagingTabBar.swift */,
+				0930483C2A02BADC007FA3DC /* PagingTabBarCell.swift */,
+				0930483E2A02BAF5007FA3DC /* PagingView.swift */,
+				093048402A02BB13007FA3DC /* PagingCollectionViewCell.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		093048442A03C8F6007FA3DC /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				093048452A03C90F007FA3DC /* MainPage_Home.swift */,
+				093048492A04E21E007FA3DC /* ViewController1.swift */,
+				093048472A03CA1C007FA3DC /* mainBaseViewController.swift */,
+				099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */,
+				0930482D2A027DDF007FA3DC /* CollectionViewController.swift */,
+				0930482F2A027DEF007FA3DC /* CollectionCell.swift */,
+				093048312A027F22007FA3DC /* Cell.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		0930484D2A054215007FA3DC /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				099C409429F912A000B2CAFA /* MyPage.swift */,
+				099C40A929FFEA9100B2CAFA /* MyTableViewHeader.swift */,
+				099C409229F90F5800B2CAFA /* MyPage_TableViewCell.swift */,
+				099C408B29F6478000B2CAFA /* MyPage_ViewController.swift */,
+				0930484B2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift */,
+				099C40A529FFE10A00B2CAFA /* SeparatorTableViewFooter.swift */,
+				099C40AB29FFFA1C00B2CAFA /* LogOutButtonFooter.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		0941D47D29E0306F00B582B0 = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +257,6 @@
 				098937E029E25C0000B9ABDC /* Auth_tvingView.swift */,
 				09EBA58429EE620100546B5A /* CreateNickname_tvingView.swift */,
 				098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */,
-				0987E80329E52DE20082CCD2 /* Main_tvingView.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -284,16 +345,12 @@
 		099C408729F6404300B2CAFA /* assignment3 */ = {
 			isa = PBXGroup;
 			children = (
+				093048442A03C8F6007FA3DC /* MainPage */,
+				093048332A02B3DD007FA3DC /* TabBar */,
 				099C408D29F648BE00B2CAFA /* Extension */,
 				099C409629F920C100B2CAFA /* tvingBaseViewController.swift */,
+				0930484D2A054215007FA3DC /* MyPage */,
 				099C408829F6406F00B2CAFA /* MainPage_ViewControllor.swift */,
-				099C409429F912A000B2CAFA /* MyPage.swift */,
-				099C40A929FFEA9100B2CAFA /* MyTableViewHeader.swift */,
-				099C409229F90F5800B2CAFA /* MyPage_TableViewCell.swift */,
-				099C408B29F6478000B2CAFA /* MyPage_ViewController.swift */,
-				099C40A529FFE10A00B2CAFA /* SeparatorTableViewFooter.swift */,
-				099C40AB29FFFA1C00B2CAFA /* LogOutButtonFooter.swift */,
-				099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */,
 			);
 			path = assignment3;
 			sourceTree = "<group>";
@@ -455,20 +512,27 @@
 				099C40AC29FFFA1C00B2CAFA /* LogOutButtonFooter.swift in Sources */,
 				0987379A29E03F3400FE8DAB /* ViewController3.swift in Sources */,
 				09EBA58529EE620100546B5A /* CreateNickname_tvingView.swift in Sources */,
+				0930484C2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift in Sources */,
 				0987379829E03F3400FE8DAB /* ViewController.swift in Sources */,
+				093048392A02B66B007FA3DC /* MainViewController.swift in Sources */,
 				09DFCE8529F3C2550065B782 /* Photo.swift in Sources */,
+				0930483F2A02BAF5007FA3DC /* PagingView.swift in Sources */,
 				0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */,
 				099C408929F6406F00B2CAFA /* MainPage_ViewControllor.swift in Sources */,
 				099C408C29F6478000B2CAFA /* MyPage_ViewController.swift in Sources */,
 				09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */,
+				0930483D2A02BADC007FA3DC /* PagingTabBarCell.swift in Sources */,
+				0930483B2A02BAAF007FA3DC /* PagingTabBar.swift in Sources */,
 				099C409529F912A000B2CAFA /* MyPage.swift in Sources */,
 				0941D48C29E0306F00B582B0 /* SceneDelegate.swift in Sources */,
 				0987379929E03F3400FE8DAB /* ViewController4.swift in Sources */,
+				093048412A02BB13007FA3DC /* PagingCollectionViewCell.swift in Sources */,
 				09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */,
+				093048302A027DEF007FA3DC /* CollectionCell.swift in Sources */,
 				09DFCE6E29F3B5150065B782 /* TradeEnum.swift in Sources */,
+				093048462A03C90F007FA3DC /* MainPage_Home.swift in Sources */,
 				099C409729F920C100B2CAFA /* tvingBaseViewController.swift in Sources */,
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
-				0987E80429E52DE20082CCD2 /* Main_tvingView.swift in Sources */,
 				098B559829E26A0500495CEC /* UIFont+.swift in Sources */,
 				09DFCE8129F3BFA50065B782 /* PhotoCell.swift in Sources */,
 				09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */,
@@ -476,11 +540,15 @@
 				09DFCE7729F3B68B0065B782 /* Image.swift in Sources */,
 				09AF2E6829E1439400D435F5 /* FirstViewController_button.swift in Sources */,
 				0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */,
+				093048322A027F22007FA3DC /* Cell.swift in Sources */,
+				0930482E2A027DDF007FA3DC /* CollectionViewController.swift in Sources */,
 				098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */,
+				093048482A03CA1C007FA3DC /* mainBaseViewController.swift in Sources */,
 				09DFCE6A29F3B27C0065B782 /* CarrotTableViewCell.swift in Sources */,
 				09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */,
 				09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */,
 				099C40AA29FFEA9100B2CAFA /* MyTableViewHeader.swift in Sources */,
+				0930484A2A04E21E007FA3DC /* ViewController1.swift in Sources */,
 				09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */,
 				099C40B02A01198600B2CAFA /* CATransition+.swift in Sources */,
 				098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */,

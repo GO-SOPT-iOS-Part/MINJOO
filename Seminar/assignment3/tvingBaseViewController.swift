@@ -16,8 +16,6 @@ class tvingBaseViewController: UIViewController {
       return type(of: self).description().components(separatedBy: ".").last ?? ""
     }()
     
-    // MARK: Initializing
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
@@ -47,12 +45,10 @@ class tvingBaseViewController: UIViewController {
     
     // MARK: UI
     
-    /// Attributes (속성) 설정 메서드
     func setStyle() {
         
         view.backgroundColor = .systemYellow
     }
     
-    /// Hierarchy, Constraints (계층 및 제약조건) 설정 메서드
     func setLayout() {}
 }

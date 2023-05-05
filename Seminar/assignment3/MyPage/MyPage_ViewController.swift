@@ -12,8 +12,8 @@ import Then
 
 
 final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate {
-    
-    
+
+    public var text: String?
     
     let list = SettingSection.dummy()
 
@@ -28,7 +28,7 @@ final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate 
     
     override func setStyle() {
         tableview.do {
-            $0.register(MyPage_TableViewCell.self, forCellReuseIdentifier: MyPage_TableViewCell.identifier)
+            $0.register(MyPage_TableViewCell.self, forCellReuseIdentifier: MyPage_TableViewCell.cellIdentifier)
             $0.rowHeight = 54
             $0.delegate = self
             $0.dataSource = self
@@ -146,12 +146,12 @@ extension MyPage_ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.identifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.cellIdentifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
             cell.configureCell(list[0].items[indexPath.row])
             return cell
 
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.identifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.cellIdentifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
             cell.configureCell(list[1].items[indexPath.row])
             return cell
         default: return UITableViewCell()
@@ -159,10 +159,6 @@ extension MyPage_ViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return list[section].header
-        
-    }
 
     // MARK : Header, Footer
     
@@ -183,7 +179,7 @@ extension MyPage_ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 280 : 0
+        return section == 0 ? 310 : 0
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

@@ -11,12 +11,13 @@ import Then
 
 class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
     
+    public var text: String?
+    
     private lazy var profileContainer = UIView()
     
     private lazy var mySubscribeContainer = UIView().then {
         $0.backgroundColor = .gray100
         $0.layer.cornerRadius = 3
-//        $0.isLayoutMarginsRelativeArrangement = true
         $0.layoutMargins = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 20.0, right: 0.0)
         
     }
@@ -55,9 +56,10 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         $0.image = UIImage(named: "profileImage")
         $0.layer.cornerRadius = 3
         $0.backgroundColor = .gray180
-        
     }
-    private let nameLabel = UIButton().then {
+    
+    let nameLabel = UIButton().then {
+    
         $0.setTitle("공듀", for: .normal)
         $0.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
         $0.titleLabel?.font = UIFont(name: "Pretendard-Semibold", size: 20)
@@ -135,6 +137,7 @@ class MyTableViewHeader: BaseTableViewHeaderFooterView<Void> {
         profileContainer.snp.makeConstraints {
             $0.height.equalTo(74)
             $0.width.equalToSuperview()
+            $0.top.equalToSuperview().inset(30)
         }
         mySubscribeContainer.snp.makeConstraints {
             $0.top.equalTo(self.profileContainer.snp.bottom).inset(-25)

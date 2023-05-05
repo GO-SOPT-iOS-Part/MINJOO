@@ -12,7 +12,7 @@ import Then
 
 
 final class MainPage_ViewController: UIViewController {
-    
+    public var text: String?
     private lazy var tvingLogo = UIImageView().then {
         $0.image = UIImage(named: "tving_logo")
     }
@@ -56,6 +56,7 @@ private extension MainPage_ViewController {
     @objc
     func goToProfile() {
         let MyPageViewController = MyPage_ViewController()
+        MyPageViewController.text = text
         self.navigationController?.pushViewController(MyPageViewController, animated: false)
     }
     

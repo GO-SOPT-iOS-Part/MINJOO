@@ -5,6 +5,7 @@
 //  Created by Minjoo Kim on 2023/04/07.
 //
 
+
 import UIKit
 import Inject
 
@@ -16,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-            window?.rootViewController = UINavigationController(rootViewController: MainPage_ViewController())
+            window?.rootViewController = UINavigationController(rootViewController: Auth_tvingView())
             window?.makeKeyAndVisible()
     }
 }
