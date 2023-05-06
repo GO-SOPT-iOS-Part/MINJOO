@@ -25,4 +25,7 @@ extension UIImage {
     
     
     static var tvingLogo: UIImage { UIImage(named: "tving_logo")! }
+    
+    static var Image: UIImage { UIImage(named: "Image")!
+    }
 }

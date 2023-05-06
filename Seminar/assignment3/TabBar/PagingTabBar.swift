@@ -20,6 +20,10 @@ class PagingTabBar: UIView {
     
     weak var delegate: PagingDelegate?
     
+    
+    
+    
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -31,8 +35,8 @@ class PagingTabBar: UIView {
         
         collectionView.backgroundColor = .tvingBlack
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.delegate = self
-        collectionView.dataSource = self
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
         collectionView.register(PagingTabBarCell.self, forCellWithReuseIdentifier: PagingTabBarCell.identifier)
         
         return collectionView
@@ -52,6 +56,20 @@ class PagingTabBar: UIView {
     let cellMarginSize: CGFloat = 3.0
 }
 
+
+private extension PagingTabBar {
+    func setupLayout() {
+        addSubview(collectionView)
+        
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+}
+
+
+
+
 extension PagingTabBar: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didTapPagingTabBarCell(scrollTo: indexPath)
@@ -62,36 +80,6 @@ extension PagingTabBar: UICollectionViewDelegateFlowLayout {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let name = self.categoryTitleList[indexPath.row]
-
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
-
-        let nameSize = (name as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
-        return CGSize(width: nameSize.width + 26, height: 50)
-    }
+   
     
-}
-
-extension PagingTabBar: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryTitleList.count
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagingTabBarCell.identifier, for: indexPath) as? PagingTabBarCell else { return UICollectionViewCell() }
-        
-        cell.setupView(title: categoryTitleList[indexPath.row])
-        return cell
-    }
-
-}
-
-private extension PagingTabBar {
-    func setupLayout() {
-        addSubview(collectionView)
-        
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
 }

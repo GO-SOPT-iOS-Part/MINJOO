@@ -32,7 +32,7 @@ class PagingView: UIView {
     init(categoryTitleList: [String], pagingTabBar: PagingTabBar) {
         self.categoryTitleList = categoryTitleList
         self.pagingTabBar = pagingTabBar
-        super.init(frame: .zero)
+        super.init()
         setupLayout()
         pagingTabBar.delegate = self
     }
@@ -89,3 +89,4 @@ private extension PagingView {
         }
     }
 }
+

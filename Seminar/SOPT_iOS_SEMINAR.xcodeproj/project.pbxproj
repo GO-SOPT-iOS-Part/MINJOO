@@ -17,8 +17,9 @@
 		093048412A02BB13007FA3DC /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048402A02BB13007FA3DC /* PagingCollectionViewCell.swift */; };
 		093048462A03C90F007FA3DC /* MainPage_Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048452A03C90F007FA3DC /* MainPage_Home.swift */; };
 		093048482A03CA1C007FA3DC /* mainBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048472A03CA1C007FA3DC /* mainBaseViewController.swift */; };
-		0930484A2A04E21E007FA3DC /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048492A04E21E007FA3DC /* ViewController1.swift */; };
+		0930484A2A04E21E007FA3DC /* MainPage_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093048492A04E21E007FA3DC /* MainPage_ViewController.swift */; };
 		0930484C2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930484B2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift */; };
+		0930484F2A058940007FA3DC /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0930484E2A058940007FA3DC /* PosterCell.swift */; };
 		0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941D48929E0306F00B582B0 /* AppDelegate.swift */; };
 		0941D48C29E0306F00B582B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941D48B29E0306F00B582B0 /* SceneDelegate.swift */; };
 		0941D49329E0307000B582B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0941D49229E0307000B582B0 /* Assets.xcassets */; };
@@ -42,7 +43,6 @@
 		098B55AA29E2879F00495CEC /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098B55A129E2879F00495CEC /* Pretendard-SemiBold.otf */; };
 		098B55B929E3C80B00495CEC /* Welcome_tvingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */; };
 		0993BE1929F13205000B490B /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993BE1829F13205000B490B /* UIView+.swift */; };
-		099C408929F6406F00B2CAFA /* MainPage_ViewControllor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C408829F6406F00B2CAFA /* MainPage_ViewControllor.swift */; };
 		099C408C29F6478000B2CAFA /* MyPage_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C408B29F6478000B2CAFA /* MyPage_ViewController.swift */; };
 		099C408F29F648F300B2CAFA /* UIImage+_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C408E29F648F300B2CAFA /* UIImage+_2.swift */; };
 		099C409129F64A4B00B2CAFA /* MainPagePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */; };
@@ -94,8 +94,9 @@
 		093048402A02BB13007FA3DC /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
 		093048452A03C90F007FA3DC /* MainPage_Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage_Home.swift; sourceTree = "<group>"; };
 		093048472A03CA1C007FA3DC /* mainBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainBaseViewController.swift; sourceTree = "<group>"; };
-		093048492A04E21E007FA3DC /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		093048492A04E21E007FA3DC /* MainPage_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage_ViewController.swift; sourceTree = "<group>"; };
 		0930484B2A0541CD007FA3DC /* BaseTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		0930484E2A058940007FA3DC /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		0941D48629E0306F00B582B0 /* SOPT_iOS_SEMINAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_iOS_SEMINAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0941D48929E0306F00B582B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0941D48B29E0306F00B582B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		098B55B329E28D3800495CEC /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		098B55B829E3C80B00495CEC /* Welcome_tvingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome_tvingView.swift; sourceTree = "<group>"; };
 		0993BE1829F13205000B490B /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		099C408829F6406F00B2CAFA /* MainPage_ViewControllor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage_ViewControllor.swift; sourceTree = "<group>"; };
 		099C408B29F6478000B2CAFA /* MyPage_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage_ViewController.swift; sourceTree = "<group>"; };
 		099C408E29F648F300B2CAFA /* UIImage+_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+_2.swift"; sourceTree = "<group>"; };
 		099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePosterCell.swift; sourceTree = "<group>"; };
@@ -194,7 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				093048452A03C90F007FA3DC /* MainPage_Home.swift */,
-				093048492A04E21E007FA3DC /* ViewController1.swift */,
+				0930484E2A058940007FA3DC /* PosterCell.swift */,
+				093048492A04E21E007FA3DC /* MainPage_ViewController.swift */,
 				093048472A03CA1C007FA3DC /* mainBaseViewController.swift */,
 				099C409029F64A4B00B2CAFA /* MainPagePosterCell.swift */,
 				0930482D2A027DDF007FA3DC /* CollectionViewController.swift */,
@@ -350,7 +351,6 @@
 				099C408D29F648BE00B2CAFA /* Extension */,
 				099C409629F920C100B2CAFA /* tvingBaseViewController.swift */,
 				0930484D2A054215007FA3DC /* MyPage */,
-				099C408829F6406F00B2CAFA /* MainPage_ViewControllor.swift */,
 			);
 			path = assignment3;
 			sourceTree = "<group>";
@@ -518,7 +518,6 @@
 				09DFCE8529F3C2550065B782 /* Photo.swift in Sources */,
 				0930483F2A02BAF5007FA3DC /* PagingView.swift in Sources */,
 				0941D48A29E0306F00B582B0 /* AppDelegate.swift in Sources */,
-				099C408929F6406F00B2CAFA /* MainPage_ViewControllor.swift in Sources */,
 				099C408C29F6478000B2CAFA /* MyPage_ViewController.swift in Sources */,
 				09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */,
 				0930483D2A02BADC007FA3DC /* PagingTabBarCell.swift in Sources */,
@@ -530,6 +529,7 @@
 				09EBA58929EE68CB00546B5A /* UITextField+.swift in Sources */,
 				093048302A027DEF007FA3DC /* CollectionCell.swift in Sources */,
 				09DFCE6E29F3B5150065B782 /* TradeEnum.swift in Sources */,
+				0930484F2A058940007FA3DC /* PosterCell.swift in Sources */,
 				093048462A03C90F007FA3DC /* MainPage_Home.swift in Sources */,
 				099C409729F920C100B2CAFA /* tvingBaseViewController.swift in Sources */,
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
@@ -548,7 +548,7 @@
 				09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */,
 				09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */,
 				099C40AA29FFEA9100B2CAFA /* MyTableViewHeader.swift in Sources */,
-				0930484A2A04E21E007FA3DC /* ViewController1.swift in Sources */,
+				0930484A2A04E21E007FA3DC /* MainPage_ViewController.swift in Sources */,
 				09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */,
 				099C40B02A01198600B2CAFA /* CATransition+.swift in Sources */,
 				098937E329E262BD00B9ABDC /* UIColor+.swift in Sources */,

@@ -12,11 +12,7 @@ import Then
 
 final class MainPagePosterCell: UICollectionViewCell {
     
-    var isTapped: Bool = false {
-        didSet {
-//            tapped()
-        }
-    }
+   
     
     var handler: (() -> (Void))?
     
@@ -61,20 +57,9 @@ final class MainPagePosterCell: UICollectionViewCell {
             $0.size.equalTo(30)
         }
     }
-    
-//    func tapped() {
-//        let image = isTapped ? "heart.fill" : "heart"
-//        button.setImage(UIImage(systemName: image), for: .normal)
-//    }
-//
-//    @objc
-//    func heartButtonTapped() {
-//        handler?()
-//    }
-//
+
     func configureCell(_ poster: Photo) {
         
         posterImage.image = poster.image
-        isTapped = poster.heartTapped
     }
 }
