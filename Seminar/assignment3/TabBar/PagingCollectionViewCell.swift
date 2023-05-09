@@ -20,7 +20,7 @@ class PagingCollectionViewCell: UICollectionViewCell {
     
     //        label.font = UIFont(name: "Pretendard-Medium", size: 15)
     //        label.textAlignment = .center
-            label.backgroundColor = .systemPink
+//            label.backgroundColor = .systemPink
     
             return label
         }()

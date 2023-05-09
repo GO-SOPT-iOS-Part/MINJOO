@@ -30,17 +30,20 @@ class MainPage_ViewController: UIViewController {
 
         return vc
     }()
-    let newViewController = MViewController()
+//    let newViewController = MViewController()
     lazy var vc1: UIViewController = {
         let vc = UIViewController()
         vc.view.backgroundColor = .blue
 //        vc.view.addSubview(HomeView)
-        vc.addChild(newViewController)
-        vc.view.addSubview(newViewController.view)
-        vc.view.addConstraints(newViewController.view.constraints)
-        newViewController.didMove(toParent: self)
+//        vc.addChild(newViewController)
+//        vc.view.addSubview(newViewController.view)
+//        vc.view.addConstraints(newViewController.view.constraints)
+//        newViewController.didMove(toParent: self)
+        
+        
         return vc
     }()
+    lazy var main = MainPage_Home()
 
     lazy var vc2: UIViewController = {
         let vc = UIViewController()
@@ -76,7 +79,7 @@ class MainPage_ViewController: UIViewController {
 
     
     lazy var dataViewControllers: [UIViewController] = {
-        return [vc1, vc2, vc3, vc4, vc5, vc6]
+        return [main, vc2, vc3, vc4, vc5, vc6]
     }()
     
     private lazy var pagingView = PagingView(categoryTitleList: categoryTitleList, pagingTabBar: pagingTabBar)
@@ -173,13 +176,13 @@ private extension MainPage_ViewController {
             pagingTabBar,
             pageViewController.view
         ].forEach { view.addSubview($0) }
+//        view.sendSubviewToBack(main.view)
         tvingLogo.snp.makeConstraints {
             $0.top.equalTo(58)
             $0.leading.equalTo(11)
             $0.width.equalTo(99)
             $0.height.equalTo(25)
         }
-        
         profileButton.snp.makeConstraints {
             $0.centerY.equalTo(tvingLogo)
             $0.trailing.equalToSuperview().offset(-9)
@@ -192,10 +195,13 @@ private extension MainPage_ViewController {
             $0.height.equalTo(pagingTabBar.cellHeight)
         }
         pageViewController.view.snp.makeConstraints {
-            $0.top.equalTo(pagingTabBar.snp.bottom)
+            $0.top.equalToSuperview()
             $0.leading.trailing.bottom.equalToSuperview()
         }
+        
+        self.view.sendSubviewToBack(pageViewController.view)
         pageViewController.didMove(toParent: self)
+        
         
         
     }

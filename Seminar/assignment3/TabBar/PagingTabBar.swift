@@ -33,7 +33,7 @@ class PagingTabBar: UIView {
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = .tvingBlack
+        collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
 //        collectionView.delegate = self
 //        collectionView.dataSource = self

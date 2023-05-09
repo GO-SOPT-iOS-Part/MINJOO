@@ -6,72 +6,173 @@
 //
 
 import UIKit
+import SnapKit
+import Then
 
 
-class BannerCell : UICollectionViewCell {
-    @IBOutlet var imgView: UIImageView!
+extension MainPage_Home {
+    @frozen
+    enum MySections: CaseIterable {
+        case banner, section1, section2, section3
+    }
 }
 
-class MViewController: UIViewController {
-    @IBOutlet var bannerCollectionView: UICollectionView!
+class MainPage_Home: UIViewController {
+    
+    
+    let fullSizeWidth = UIScreen.main.bounds.width
+//    var bannerViews: [UIImageView] = []
+    
+    
+    var timer = Timer()
+    var xOffset: CGFloat = 0
+    var currentPage = 0 {
+        didSet{
+            xOffset = fullSizeWidth * CGFloat(self.currentPage)
+            tableview.reloadData()
+        }
+    }
+    private lazy var tableview = UITableView(frame: .zero, style: .grouped).then {
+        $0.backgroundColor = .tvingBlack
+        $0.contentInsetAdjustmentBehavior = .never
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerCollectionView.delegate = self
-        bannerCollectionView.dataSource = self
-        bannerTimer()
+        registerCell()
+        setDelegate()
+        setTimer()
+        setLayout()
     }
-    var nowPage: Int = 0
-
-    // 데이터 배열
-    let dataArray: Array<UIImage> = [.Image, .Image, .Image]
     
+    
+    func registerCell() {
+        tableview.register(TableViewCell.self, forCellReuseIdentifier:  TableViewCell.identifier)
+        tableview.register(TableViewCell2.self, forCellReuseIdentifier: TableViewCell2.identifier)
+    }
+    
+    func setDelegate() {
+        tableview.delegate = self
+        tableview.dataSource = self
+    }
+    
+    func setLayout() {
+        view.addSubview(tableview)
+        
+        tableview.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    func setTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(swipeLeft), userInfo: nil, repeats: true)
+    }
+    
+    @objc func swipeLeft() {
+        self.currentPage += 1
+        if self.currentPage > bannerViews.count - 1 {
+            self.currentPage = 0
+        }
+    }
+    
+    func swipeRight() {
+        self.currentPage -= 1
+        if currentPage < 0 {
+            currentPage = bannerViews.count - 1
+        }
+    }
+    
+    @objc func pageControlDidTap() {
+        timer.invalidate()
+        swipeLeft()
+    }
     
 }
 
-
-extension MViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    //컬렉션뷰 개수 설정
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArray.count
+extension MainPage_Home: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return MySections.allCases.count
     }
     
-    //컬렉션뷰 셀 설정
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = bannerCollectionView.dequeueReusableCell(withReuseIdentifier: "BannerCell", for: indexPath) as! BannerCell
-        cell.imgView.image = dataArray[indexPath.row]
-        return cell
-    }
-    
-    // UICollectionViewDelegateFlowLayout 상속
-    //컬렉션뷰 사이즈 설정
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: bannerCollectionView.frame.size.width  , height:  bannerCollectionView.frame.height)
-    }
-    
-    //컬렉션뷰 감속 끝났을 때 현재 페이지 체크
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        nowPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-    }
-    
-    
-    func bannerTimer() {
-        let _: Timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { (Timer) in
-            self.bannerMove()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sectionType = MySections.allCases[section]
+        switch sectionType {
+        case .banner: return 1
+        case .section1: return 1
+        case .section2: return 1
+        case .section3: return 1
         }
     }
-    // 배너 움직이는 매서드
-    func bannerMove() {
-        // 현재페이지가 마지막 페이지일 경우
-        if nowPage == dataArray.count-1 {
-        // 맨 처음 페이지로 돌아감
-            bannerCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: true)
-            nowPage = 0
-            return
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let setctionType = MySections.allCases[indexPath.section]
+        switch setctionType {
+        case .banner:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell
+            else { return UITableViewCell() }
+            
+            self.bannerViews = cell.bannerViews
+            cell.myCollectionView.delegate = self
+            cell.pageControl.currentPage = self.currentPage
+            cell.myCollectionView.contentOffset.x = self.xOffset
+            return cell
+        case .section1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.identifier, for: indexPath) as? TableViewCell2
+            else { return UITableViewCell() }
+            
+            return cell
+        case .section2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.identifier, for: indexPath) as? TableViewCell2
+            else { return UITableViewCell() }
+            
+            return cell
+        case .section3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.identifier, for: indexPath) as? TableViewCell2
+            else { return UITableViewCell() }
+            
+            return cell
         }
-        // 다음 페이지로 전환
-        nowPage += 1
-        bannerCollectionView.scrollToItem(at: NSIndexPath(item: nowPage, section: 0) as IndexPath, at: .right, animated: true)
     }
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let setctionType = MySections.allCases[indexPath.section]
+        switch setctionType {
+        case .banner: return 600
+        case .section1: return 200
+        case .section2: return 200
+        case .section3: return 200
+            
+        }
+    }
 }
+
+
+
+extension MainPage_Home: UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ collectionView: UICollectionView) {
+        timer.invalidate()
+    }
+    
+    func scrollViewDidEndDragging(_ collectionView: UICollectionView, willDecelerate decelerate: Bool) {
+        setTimer()
+    }
+    
+    func scrollViewDidEndDecelerating(_ collectionView: UICollectionView) {
+        
+        if collectionView == tableview {
+        }else{
+            let translatedPoint = collectionView.panGestureRecognizer.translation(in: collectionView)
+            print(translatedPoint.x)
+            if translatedPoint.x < 0 {
+                swipeLeft()
+            }else{
+                swipeRight()
+            }
+        }
+    }
+}
+
+
+
