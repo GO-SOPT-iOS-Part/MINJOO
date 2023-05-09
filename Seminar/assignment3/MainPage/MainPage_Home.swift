@@ -21,7 +21,7 @@ class MainPage_Home: UIViewController {
     
     
     let fullSizeWidth = UIScreen.main.bounds.width
-//    var bannerViews: [UIImageView] = []
+    var bannerViews = TableViewCell().bannerViews
     
     
     var timer = Timer()

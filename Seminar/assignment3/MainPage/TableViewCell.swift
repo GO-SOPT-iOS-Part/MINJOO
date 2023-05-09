@@ -15,9 +15,9 @@ class TableViewCell: UITableViewCell {
     let fullSize = UIScreen.main.bounds
     var bannerViews: [UIImageView] {
         var bannerView = [UIImageView]()
-        for i in 0 ... 5 {
-            let imageView = UIImageView (image: UIImage(named: "poster"))
-//            imageView.frame = CGRect(x: fullSize.width * CGFloat(i), y: 0, width: fullSize.width, height: 800)
+        for i in 0 ... 4 {
+            let imageView = UIImageView (image: UIImage(named: "poster_\(i)"))
+            imageView.frame = CGRect(x: fullSize.width * CGFloat(i), y: 0, width: fullSize.width, height: 700)
             bannerView.append(imageView)
         }
         return bannerView
@@ -31,7 +31,8 @@ class TableViewCell: UITableViewCell {
     }
     
     lazy var myCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
-//        $0.contentSize = CGSize(width: Int(fullSize.width) * bannerViews.count, height: 700)
+        $0.contentSize = CGSize(width: Int(fullSize.width) * bannerViews.count, height: 700)
+        print(Int(fullSize.width) * bannerViews.count)
         $0.isPagingEnabled = true
         $0.showsHorizontalScrollIndicator = false
         $0.showsVerticalScrollIndicator = false
@@ -48,6 +49,7 @@ class TableViewCell: UITableViewCell {
         
         $0.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         $0.numberOfPages = bannerViews.count
+//        print( "이거임 !!!\(bannerViews.count)")
         $0.currentPage = 0
         $0.isUserInteractionEnabled = true
     }
@@ -73,8 +75,8 @@ class TableViewCell: UITableViewCell {
     func setLayouts() {
         
         myCollectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(contentView)
-            make.edges.equalTo(contentView)
+            make.top.equalToSuperview()
+            make.edges.equalToSuperview()
             make.height.equalTo(600)
         }
         
