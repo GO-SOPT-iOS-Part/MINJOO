@@ -35,8 +35,6 @@ class PagingTabBar: UIView {
         
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
         collectionView.register(PagingTabBarCell.self, forCellWithReuseIdentifier: PagingTabBarCell.identifier)
         
         return collectionView
@@ -78,8 +76,4 @@ extension PagingTabBar: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return self.cellMarginSize
     }
-    
-    
-   
-    
 }

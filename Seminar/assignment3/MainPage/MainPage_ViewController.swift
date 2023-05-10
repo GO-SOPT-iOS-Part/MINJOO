@@ -34,12 +34,6 @@ class MainPage_ViewController: UIViewController {
     lazy var vc1: UIViewController = {
         let vc = UIViewController()
         vc.view.backgroundColor = .blue
-//        vc.view.addSubview(HomeView)
-//        vc.addChild(newViewController)
-//        vc.view.addSubview(newViewController.view)
-//        vc.view.addConstraints(newViewController.view.constraints)
-//        newViewController.didMove(toParent: self)
-        
         
         return vc
     }()
@@ -79,7 +73,7 @@ class MainPage_ViewController: UIViewController {
 
     
     lazy var dataViewControllers: [UIViewController] = {
-        return [main, vc2, vc3, vc4, vc5, vc6]
+        return [ main, vc2, vc3, vc4, vc5, vc6]
     }()
     
     private lazy var pagingView = PagingView(categoryTitleList: categoryTitleList, pagingTabBar: pagingTabBar)
@@ -165,7 +159,6 @@ extension MainPage_ViewController: UICollectionViewDelegate {
         guard pagingTabBar.collectionView.cellForItem(at: IndexPath(item: isSelected!, section: 0)) is PagingTabBarCell else { return }
             currentPage = indexPath.item
         }
-    
 }
 
 private extension MainPage_ViewController {

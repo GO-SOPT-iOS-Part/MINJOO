@@ -22,8 +22,6 @@ class TableViewCell2: UITableViewCell {
         $0.itemSize = CGSize(width: 115, height: 150)
     }
     
-    private var dataSource = getSampleImages()
-
     var movieList: [Result] = [] {
         didSet {
             collectionView.reloadData()
@@ -68,7 +66,6 @@ class TableViewCell2: UITableViewCell {
         }
         
         self.collectionView.dataSource = self
-//        self.collectionView.delegate = self
     }
     
     
@@ -85,6 +82,9 @@ extension TableViewCell2: UICollectionViewDataSource {
     }
 }
 
+
+
+
 extension TableViewCell2 {
     func test () {
         MovieService.shared.getNowPlaying() { response in
@@ -96,5 +96,61 @@ extension TableViewCell2 {
             default: return
             }
         }
+    }
+}
+
+
+
+extension TableViewCell2: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list[section].items.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.cellIdentifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
+            cell.configureCell(list[0].items[indexPath.row])
+            return cell
+
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPage_TableViewCell.cellIdentifier, for: indexPath) as? MyPage_TableViewCell else { return UITableViewCell() }
+            cell.configureCell(list[1].items[indexPath.row])
+            return cell
+        default: return UITableViewCell()
+            
+        }
+    }
+    
+
+    // MARK : Header, Footer
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        switch section {
+        case 0: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "SeparatorTableViewFooter")
+        case 1: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "LogOutButtonFooter")
+        default: return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard section == 0, let headerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MyTableViewHeader") as? MyTableViewHeader else { return nil }
+        
+        let tapGesture = UITapGestureRecognizer()
+        headerCell.addGestureRecognizer(tapGesture)
+        return headerCell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return section == 0 ? 310 : 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return section == 1 ? 100 : 33
     }
 }

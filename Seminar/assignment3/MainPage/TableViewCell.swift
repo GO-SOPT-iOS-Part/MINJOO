@@ -15,30 +15,36 @@ class TableViewCell: UITableViewCell {
     let fullSize = UIScreen.main.bounds
     var bannerViews: [UIImageView] {
         var bannerView = [UIImageView]()
-        for i in 0 ... 4 {
+        for i in 0 ... 5 {
             let imageView = UIImageView (image: UIImage(named: "poster_\(i)"))
             imageView.frame = CGRect(x: fullSize.width * CGFloat(i), y: 0, width: fullSize.width, height: 700)
+            
             bannerView.append(imageView)
+            
         }
         return bannerView
     }
     
     let layout = UICollectionViewFlowLayout().then {
-//        $0.minimumLineSpacing = 10
-        
         $0.scrollDirection = .vertical
         $0.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     lazy var myCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
-        $0.contentSize = CGSize(width: Int(fullSize.width) * bannerViews.count, height: 700)
+        $0.contentSize = CGSize(width: Int(fullSize.width) * bannerViews.count, height: 600)
         print(Int(fullSize.width) * bannerViews.count)
         $0.isPagingEnabled = true
+        $0.isScrollEnabled = true
         $0.showsHorizontalScrollIndicator = false
-        $0.showsVerticalScrollIndicator = false
+        $0.showsVerticalScrollIndicator = true
+        
+        $0.clipsToBounds = true
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentInsetAdjustmentBehavior = .never
         for banner in bannerViews {
             $0.addSubview(banner)
         }
+        $0.backgroundColor = .systemOrange
         
     }
     lazy var pageControl = UIPageControl().then {
@@ -49,7 +55,6 @@ class TableViewCell: UITableViewCell {
         
         $0.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
         $0.numberOfPages = bannerViews.count
-//        print( "이거임 !!!\(bannerViews.count)")
         $0.currentPage = 0
         $0.isUserInteractionEnabled = true
     }
@@ -58,6 +63,7 @@ class TableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setSubviews()
         setLayouts()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -71,12 +77,10 @@ class TableViewCell: UITableViewCell {
         contentView.addSubview(pageControl)
     }
     
-    //MARK: - Set Layouts
     func setLayouts() {
-        
         myCollectionView.snp.makeConstraints { (make) in
             make.top.equalToSuperview()
-            make.edges.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
             make.height.equalTo(600)
         }
         
@@ -90,3 +94,9 @@ class TableViewCell: UITableViewCell {
     }
 }
 
+extension TableViewCell: UICollectionViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let page = Int(targetContentOffset.pointee.x / self.frame.width)
+        self.pageControl.currentPage = page
+      }
+}
