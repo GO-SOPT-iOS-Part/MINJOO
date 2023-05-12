@@ -11,38 +11,53 @@ import SnapKit
 import Then
 
 
-class TableViewCell2_Header: UITableViewHeaderFooterView {
-    
-    static let identifier = "category"
+import UIKit
+import SnapKit
+import Then
 
-    lazy var separatorView = UIView().then {
-        $0.backgroundColor = .gray180
-    }
-    override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
 
-        configure()
+class TableViewCell2_Header: BaseTableViewHeaderFooterView<Void> {
+
+    lazy var view = UIView().then {
+        $0.backgroundColor = .clear
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    let category = UILabel().then {
+        $0.text = "티빙에서 꼭 봐야하는 콘텐츠"
+        $0.font = UIFont(name: "Pretendard-semibold", size: 15)
+        $0.textColor = .tvingWhite
     }
+    let more = UIButton().then {
+        $0.setTitle("전체보기 >", for: .normal)
+        $0.titleLabel?.font = UIFont(name: "Pretendard-Medium", size: 13)
+        $0.setTitleColor(.gray490, for: .normal)
     
-    func configure() {
+    }
+    override func configure() {
+        super.configure()
 
         addSubviews()
         makeConstraints()
     }
 
     private func addSubviews() {
-        contentView.addSubview(separatorView)
+        view.addSubviews(category, more)
+        contentView.addSubview(view)
     }
 
     private func makeConstraints() {
-        separatorView.snp.makeConstraints { maker in
-            maker.height.equalTo(1)
-            maker.leading.trailing.equalToSuperview().inset(8)
-            maker.centerY.equalToSuperview()
+        category.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
+        more.snp.makeConstraints {
+            $0.trailing.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
+        view.snp.makeConstraints {
+            $0.height.equalTo(14)
+            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.bottom.equalToSuperview().inset(10)
+            $0.centerY.equalToSuperview()
         }
     }
 }

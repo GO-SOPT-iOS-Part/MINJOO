@@ -27,7 +27,7 @@ class MainPage_ViewController: UIViewController {
 
     lazy var pageViewController: UIPageViewController = {
         let vc = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-
+//        vc.view.backgroundColor = .tvingBlack
         return vc
     }()
 //    let newViewController = MViewController()
@@ -85,8 +85,6 @@ class MainPage_ViewController: UIViewController {
         setupLayout()
 
         setupDelegate()
-
-//        configure()
 
         if let firstVC = dataViewControllers.first {
             pageViewController.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
@@ -224,9 +222,11 @@ extension MainPage_ViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let name = self.categoryTitleList[indexPath.row]
 
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "Pretendard-medium", size: 17)]
 
         let nameSize = (name as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
         return CGSize(width: nameSize.width + 20, height: 50)
     }
 }
+
+

@@ -10,18 +10,25 @@ import SnapKit
 import Then
 
 
-class TableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell{
     static let identifier = "bannerCell"
     let fullSize = UIScreen.main.bounds
     var bannerViews: [UIImageView] {
         var bannerView = [UIImageView]()
-        for i in 0 ... 5 {
-            let imageView = UIImageView (image: UIImage(named: "poster_\(i)"))
+        var imageView = UIImageView()
+        for i in 0 ... 4 {
+            imageView = UIImageView (image: UIImage(named: "poster_\(i)"))
             imageView.frame = CGRect(x: fullSize.width * CGFloat(i), y: 0, width: fullSize.width, height: 700)
-            
             bannerView.append(imageView)
             
         }
+//        imageView = UIImageView (image: UIImage(named: "poster_\(4)"))
+//        imageView.frame = CGRect(x: fullSize.width * CGFloat(0), y: 0, width: fullSize.width, height: 700)
+//        bannerView.insert(imageView, at: 0)
+//
+//        imageView = UIImageView (image: UIImage(named: "poster_\(1)"))
+//        imageView.frame = CGRect(x: fullSize.width * CGFloat(6), y: 0, width: fullSize.width, height: 700)
+//        bannerView.append(imageView)
         return bannerView
     }
     
@@ -32,7 +39,8 @@ class TableViewCell: UITableViewCell {
     
     lazy var myCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
         $0.contentSize = CGSize(width: Int(fullSize.width) * bannerViews.count, height: 600)
-        print(Int(fullSize.width) * bannerViews.count)
+        
+//        print(Int(fullSize.width) * bannerViews.count)
         $0.isPagingEnabled = true
         $0.isScrollEnabled = true
         $0.showsHorizontalScrollIndicator = false
@@ -44,12 +52,11 @@ class TableViewCell: UITableViewCell {
         for banner in bannerViews {
             $0.addSubview(banner)
         }
-        $0.backgroundColor = .systemOrange
+//        $0.backgroundColor = .systemOrange
         
     }
     lazy var pageControl = UIPageControl().then {
         
-        $0.backgroundColor = .clear
         $0.currentPageIndicatorTintColor = .tvingWhite
         $0.pageIndicatorTintColor = .gray
         
@@ -71,7 +78,6 @@ class TableViewCell: UITableViewCell {
     }
     
     //MARK: - Add Subviews
-    
     func setSubviews() {
         contentView.addSubview(myCollectionView)
         contentView.addSubview(pageControl)
@@ -87,16 +93,7 @@ class TableViewCell: UITableViewCell {
         pageControl.snp.makeConstraints { (make) in
             make.bottom.equalTo(myCollectionView.snp.bottom)
             make.height.equalTo(20)
-            //            make.centerX.width.equalTo(self)
             make.leading.equalToSuperview().inset(-50)
         }
-        
     }
-}
-
-extension TableViewCell: UICollectionViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let page = Int(targetContentOffset.pointee.x / self.frame.width)
-        self.pageControl.currentPage = page
-      }
 }

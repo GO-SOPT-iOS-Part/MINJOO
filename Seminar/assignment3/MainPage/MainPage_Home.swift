@@ -17,14 +17,17 @@ extension MainPage_Home {
     }
 }
 
-class MainPage_Home: UIViewController {
+class MainPage_Home: UIViewController, UICollectionViewDelegate {
     
     private lazy var tableview = UITableView(frame: .zero, style: .grouped).then {
-        $0.backgroundColor = .systemYellow
+        $0.backgroundColor = .tvingBlack
+       
         $0.contentInsetAdjustmentBehavior = .never
         
     }
     
+    private var scrollToEnd: Bool = false
+    private var scrollToBegin: Bool = false
     
     let fullSizeWidth = UIScreen.main.bounds.width
     var bannerViews = TableViewCell().bannerViews
@@ -39,7 +42,7 @@ class MainPage_Home: UIViewController {
     }
     
     
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    weak var topConstraint: NSLayoutConstraint!
     var topPadding:CGFloat = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +50,11 @@ class MainPage_Home: UIViewController {
         setDelegate()
         setTimer()
         setLayout()
-        if #available(iOS 13.0, *) {
+        
+//        bannerViews.insert(bannerViews[bannerViews.count-1], at: 0)
+//        bannerViews.append(bannerViews[1])
+        
+        if #available(iOS 15.0, *) {
             let window = UIApplication.shared.windows.first
             
             let topPadding = window?.safeAreaInsets.top
@@ -59,37 +66,29 @@ class MainPage_Home: UIViewController {
             UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.addSubview(statusBar)
             
         }
-        
-        bannerViews.insert(bannerViews[bannerViews.count-1], at: 0)
-        bannerViews.append(bannerViews[1])
-        //        navigationController?.setNavigationBarHidden(true, animated: true)
-        //
-        //        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        //        self.navigationController!.navigationBar.shadowImage = UIImage()
-        //        self.navigationController!.navigationBar.isTranslucent = true
-        //
-        //        topConstraint.constant = -64
-        //        if #available(iOS 11.0, *) {
-        //            let window = UIApplication.shared.keyWindow
-        //            topPadding = (window?.safeAreaInsets.top)!
-        //            topConstraint.constant = -(64+topPadding)
-        //        }
+        func viewDidLayoutSubviews() {
+            super.viewDidLayoutSubviews()
+            TableViewCell().myCollectionView.setContentOffset(.init(x: fullSizeWidth, y: TableViewCell().myCollectionView.contentOffset.y), animated: false)
+        }
     }
     
     
     func registerCell() {
         tableview.register(TableViewCell.self, forCellReuseIdentifier:  TableViewCell.identifier)
         tableview.register(TableViewCell2.self, forCellReuseIdentifier: TableViewCell2.identifier)
+        
+        tableview.register(TableViewCell2_Header.self, forHeaderFooterViewReuseIdentifier: "header")
     }
     
     func setDelegate() {
         tableview.delegate = self
         tableview.dataSource = self
+        TableViewCell().myCollectionView.delegate = self
+        
     }
     
     func setLayout() {
         view.addSubview(tableview)
-        
         tableview.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.bottom.equalToSuperview()
@@ -146,7 +145,8 @@ extension MainPage_Home: UITableViewDelegate, UITableViewDataSource {
             cell.myCollectionView.delegate = self
             cell.pageControl.currentPage = self.currentPage
             cell.myCollectionView.contentOffset.x = self.xOffset
-            cell.backgroundColor = .systemBlue
+            cell.selectionStyle = .none
+            //            cell.backgroundColor = .systemBlue
             return cell
         case .section1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell2.identifier, for: indexPath) as? TableViewCell2
@@ -175,49 +175,49 @@ extension MainPage_Home: UITableViewDelegate, UITableViewDataSource {
             
         }
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+    
+    // MARK : Header, Footer
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionType = MySections.allCases[section]
+        
+        switch sectionType {
+            
+        case .banner: return nil
+        case .section1: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        case .section2: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        case .section3: return tableView.dequeueReusableHeaderFooterView(withIdentifier: "header")
+        }
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let sectionType = MySections.allCases[section]
+        switch sectionType {
+        case .banner:
+            return 0
+        case .section1, .section2, .section3: return 20.0
+            
+        }
+    }
 }
 
-
-
-extension MainPage_Home: UICollectionViewDelegate {
-    func scrollViewWillBeginDragging(_ collectionView: UICollectionView) {
-        timer.invalidate()
-        
-    }
-    
-    func scrollViewDidEndDragging(_ collectionView: UICollectionView, willDecelerate decelerate: Bool) {
-        setTimer()
-    }
-    
-    func scrollViewDidEndDecelerating(_ collectionView: UICollectionView) {
-//        if collectionView.frame.size.width != 0 {
-//            let value = (collectionView.contentOffset.x / collectionView.frame.width)
-//            TableViewCell().pageControl.currentPage = Int(round(value))
-//        }
-        
-        
-        if collectionView == TableViewCell().myCollectionView {
-        }else{
-            let translatedPoint = collectionView.panGestureRecognizer.translation(in: collectionView)
-            print(translatedPoint.x)
-            if translatedPoint.x < 0 {
-                swipeLeft()
-            }else{
-                swipeRight()
+extension MainPage_Home: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == TableViewCell().myCollectionView {
+            let width = scrollView.bounds.size.width
+            // 좌표보정을 위해 절반의 너비를 더해줌
+            let x = scrollView.contentOffset.x + (width/2)
+            
+            let newPage = Int(x / width)
+            if TableViewCell().pageControl.currentPage != newPage {
+                TableViewCell().pageControl.currentPage = newPage
             }
         }
-        let x = collectionView.contentOffset.x
-                let w = collectionView.bounds.size.width
-                currentPage = Int(ceil(x/w))
-                print(currentPage)
     }
-    
-    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        timer.invalidate()
+    }
+    internal func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView == TableViewCell().myCollectionView { setTimer() }
+    }
 }
-
-
-

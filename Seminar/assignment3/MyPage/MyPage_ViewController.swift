@@ -111,7 +111,7 @@ final class MyPage_ViewController: tvingBaseViewController, UITableViewDelegate 
             $0.axis = .horizontal
             $0.alignment = .center
             $0.spacing = 10
-            
+
             let rightStackBarButtonItem = UIBarButtonItem(customView: $0)
             navigationItem.leftBarButtonItem = back
             navigationItem.rightBarButtonItem = rightStackBarButtonItem

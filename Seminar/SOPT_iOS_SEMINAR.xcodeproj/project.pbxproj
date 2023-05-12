@@ -270,6 +270,7 @@
 		0951CE2E2A0A2F4800C3F02E /* assignment4 */ = {
 			isa = PBXGroup;
 			children = (
+				0951CE362A0A2FA800C3F02E /* Movie */,
 			);
 			path = assignment4;
 			sourceTree = "<group>";
@@ -281,7 +282,6 @@
 				0951CE302A0A2F8500C3F02E /* Config.swift */,
 				0951CE322A0A2F9100C3F02E /* File.swift */,
 				0951CE342A0A2FA000C3F02E /* NetworkResult.swift */,
-				0951CE362A0A2FA800C3F02E /* Movie */,
 			);
 			path = feat4;
 			sourceTree = "<group>";
