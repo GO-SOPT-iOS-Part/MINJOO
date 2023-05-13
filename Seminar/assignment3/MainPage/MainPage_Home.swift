@@ -205,7 +205,6 @@ extension MainPage_Home: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == TableViewCell().myCollectionView {
             let width = scrollView.bounds.size.width
-            // 좌표보정을 위해 절반의 너비를 더해줌
             let x = scrollView.contentOffset.x + (width/2)
             
             let newPage = Int(x / width)
