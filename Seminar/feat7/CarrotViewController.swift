@@ -6,16 +6,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class CarrotViewController: BaseViewController {
     
     private let tableView = UITableView()
     
-    private let dummy = Carrot.dummy()
+    public let dummy = Carrot.dummy()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func setStyle() {
@@ -28,6 +28,7 @@ final class CarrotViewController: BaseViewController {
             $0.delegate = self
             $0.dataSource = self
         }
+        
     }
     
     override func setLayout() {
@@ -54,6 +55,10 @@ extension CarrotViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CarrotTableViewCell.identifier, for: indexPath) as? CarrotTableViewCell else { return UITableViewCell() }
         
         cell.configureCell(dummy[indexPath.row])
+        
+        cell.starButton.tag = indexPath.row
+        
+        cell.id = dummy[indexPath.row].id
         
         return cell
     }

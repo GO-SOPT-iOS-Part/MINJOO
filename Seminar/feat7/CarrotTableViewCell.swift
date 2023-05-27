@@ -9,11 +9,14 @@ import UIKit
 
 import SnapKit
 import Then
+import RealmSwift
 
 final class CarrotTableViewCell: UITableViewCell {
     
     static let identifier = "CarrotTableViewCell"
+    let localRealm = try! Realm()
     
+    var id = 0
     private lazy var carrotImage = UIImageView()
     private let productLabel = UILabel()
     private let placeLabel = UILabel()
@@ -140,25 +143,24 @@ final class CarrotTableViewCell: UITableViewCell {
     func configureCell(_ carrot: Carrot) {
         
         switch carrot.tradeStatus {
-        case .reservation:
-            self.reservationLabel.text = "예약중"
-        case .completed:
-            self.reservationLabel.text = "거래완료"
-        case .shared:
-            self.reservationLabel.text = "나눔완료"
-        case .clear:
-            self.reservationLabel.text = ""
+        case "예약중":
+            self.reservationLabel.backgroundColor = .systemGreen
+        case "거래완료":
+            self.reservationLabel.backgroundColor = .black
+        case "나눔완료":
+            self.reservationLabel.backgroundColor = .gray
+        default:
+            self.reservationLabel.backgroundColor = .white
         }
         
-        carrotImage.image = carrot.image
+        carrotImage.image = UIImage(named: carrot.image)
         productLabel.text = carrot.product
         placeLabel.text = carrot.place
         timeLabel.text = carrot.time
         
-        reservationLabel.text = carrot.tradeStatus.title
-        reservationLabel.backgroundColor = carrot.tradeStatus.backgroundColor
+        reservationLabel.text = carrot.tradeStatus
         
-        reservationLabel.isHidden = carrot.tradeStatus == .clear
+        reservationLabel.isHidden = carrot.tradeStatus == ""
         
         var price = String(carrot.price)
         
@@ -167,11 +169,22 @@ final class CarrotTableViewCell: UITableViewCell {
     }
     
     @objc func starButtonTapped() {
-        if !(isTapped) {
-            NotificationCenter.default.post(name: Notification.Name("ScrapButtonTappedNotification"), object: nil)
-        }
         self.isTapped.toggle()
         handler?()
+//        try! localRealm.write {
+//            localRealm.add()
+//        }
+        
+        print(starButton.tag)
+    
+        let price = Int(priceLabel.text!) ?? 0
+        
+        let task = Carrot(id: id, image: "", product: productLabel.text!, place: placeLabel.text!, time: timeLabel.text!, tradeStatus: reservationLabel.text!, price: price, star: true)
+        
+        try! localRealm.write {
+            localRealm.add(task)
+        }
+        
     }
     
     func updateButton() {
