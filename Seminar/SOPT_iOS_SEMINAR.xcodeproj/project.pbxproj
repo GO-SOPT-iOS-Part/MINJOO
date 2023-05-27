@@ -75,6 +75,8 @@
 		09B231502A21D6E50001F181 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2314F2A21D6E50001F181 /* RealmViewController.swift */; };
 		09C2583C2A0B727800125BF7 /* TabelViewCell2_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2583B2A0B727800125BF7 /* TabelViewCell2_Header.swift */; };
 		09C6718C2A21DAD9001AC681 /* DummyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C6718B2A21DAD9001AC681 /* DummyFile.swift */; };
+		09C6718E2A21DB7D001AC681 /* CarrotTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C6718D2A21DB7D001AC681 /* CarrotTabBarController.swift */; };
+		09C671902A21DBDF001AC681 /* CarrotSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C6718F2A21DBDF001AC681 /* CarrotSecondViewController.swift */; };
 		09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */; };
 		09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */; };
 		09DFCE6429F3AC230065B782 /* BaseView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6329F3AC230065B782 /* BaseView2.swift */; };
@@ -164,6 +166,8 @@
 		09B2314F2A21D6E50001F181 /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		09C2583B2A0B727800125BF7 /* TabelViewCell2_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelViewCell2_Header.swift; sourceTree = "<group>"; };
 		09C6718B2A21DAD9001AC681 /* DummyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyFile.swift; sourceTree = "<group>"; };
+		09C6718D2A21DB7D001AC681 /* CarrotTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTabBarController.swift; sourceTree = "<group>"; };
+		09C6718F2A21DBDF001AC681 /* CarrotSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotSecondViewController.swift; sourceTree = "<group>"; };
 		09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView_DelegatePattern.swift; sourceTree = "<group>"; };
 		09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
 		09DFCE6329F3AC230065B782 /* BaseView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView2.swift; sourceTree = "<group>"; };
@@ -439,6 +443,8 @@
 				09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */,
 				09DFCE6D29F3B5150065B782 /* TradeEnum.swift */,
 				09DFCE6F29F3B54F0065B782 /* Carrot.swift */,
+				09C6718D2A21DB7D001AC681 /* CarrotTabBarController.swift */,
+				09C6718F2A21DBDF001AC681 /* CarrotSecondViewController.swift */,
 			);
 			path = feat7;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 				09AF2E6A29E143A500D435F5 /* SecondViewController_button.swift in Sources */,
 				09B2314E2A21D5F40001F181 /* week7ViewController.swift in Sources */,
 				098B559829E26A0500495CEC /* UIFont+.swift in Sources */,
+				09C6718E2A21DB7D001AC681 /* CarrotTabBarController.swift in Sources */,
 				09DFCE8129F3BFA50065B782 /* PhotoCell.swift in Sources */,
 				09AF2E6C29E14FED00D435F5 /* FirstViewController_colorbox.swift in Sources */,
 				09AF2E5A29E132F100D435F5 /* FirstViewController_DelegatePattern.swift in Sources */,
@@ -632,6 +639,7 @@
 				0987379B29E03F3400FE8DAB /* ViewController2.swift in Sources */,
 				098937E129E25C0000B9ABDC /* Auth_tvingView.swift in Sources */,
 				09DFCE6A29F3B27C0065B782 /* CarrotTableViewCell.swift in Sources */,
+				09C671902A21DBDF001AC681 /* CarrotSecondViewController.swift in Sources */,
 				0951CE452A0A34A700C3F02E /* MyCell.swift in Sources */,
 				09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */,
 				09AF2E6E29E156E700D435F5 /* uibutton+.swift in Sources */,

@@ -21,6 +21,15 @@ final class CarrotTableViewCell: UITableViewCell {
     private let reservationLabel = UILabel()
     private let priceLabel = UILabel()
     private let horizontalStackView = UIStackView()
+    public lazy var starButton = UIButton()
+    
+    var handler: (() -> Void)?
+    
+    var isTapped: Bool = false {
+        didSet {
+            updateButton()
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -73,12 +82,18 @@ final class CarrotTableViewCell: UITableViewCell {
             $0.alignment = .center
             $0.spacing = 5
         }
+        
+        starButton.do {
+            $0.setImage(UIImage(systemName: "star"), for: .normal)
+            $0.tintColor = .systemYellow
+            $0.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+        }
     }
     
     func setLayout() {
         
         [carrotImage, productLabel, placeLabel,
-         timeLabel, horizontalStackView]
+         timeLabel, horizontalStackView, starButton]
             .forEach { contentView.addSubview($0) }
         
         [reservationLabel, priceLabel]
@@ -115,6 +130,11 @@ final class CarrotTableViewCell: UITableViewCell {
             $0.top.equalTo(timeLabel.snp.bottom).offset(6)
             $0.height.equalTo(30)
         }
+        
+        starButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(30)
+            $0.centerY.equalToSuperview()
+        }
     }
     
     func configureCell(_ carrot: Carrot) {
@@ -145,4 +165,18 @@ final class CarrotTableViewCell: UITableViewCell {
         price.insert(",", at: price.index(price.endIndex, offsetBy: -3))
         priceLabel.text = price + "원"
     }
+    
+    @objc func starButtonTapped() {
+        if !(isTapped) {
+            NotificationCenter.default.post(name: Notification.Name("ScrapButtonTappedNotification"), object: nil)
+        }
+        self.isTapped.toggle()
+        handler?()
+    }
+    
+    func updateButton() {
+        let image = isTapped ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        starButton.setImage(image, for: .normal)
+    }
+    
 }
