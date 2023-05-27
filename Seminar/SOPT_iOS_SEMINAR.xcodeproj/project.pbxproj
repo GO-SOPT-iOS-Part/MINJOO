@@ -74,6 +74,7 @@
 		09B2314E2A21D5F40001F181 /* week7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2314D2A21D5F40001F181 /* week7ViewController.swift */; };
 		09B231502A21D6E50001F181 /* RealmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2314F2A21D6E50001F181 /* RealmViewController.swift */; };
 		09C2583C2A0B727800125BF7 /* TabelViewCell2_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2583B2A0B727800125BF7 /* TabelViewCell2_Header.swift */; };
+		09C6718C2A21DAD9001AC681 /* DummyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C6718B2A21DAD9001AC681 /* DummyFile.swift */; };
 		09DFCE6029F3A86E0065B782 /* FirstView_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */; };
 		09DFCE6229F3ABDB0065B782 /* BaseViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */; };
 		09DFCE6429F3AC230065B782 /* BaseView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFCE6329F3AC230065B782 /* BaseView2.swift */; };
@@ -162,6 +163,7 @@
 		09B2314D2A21D5F40001F181 /* week7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week7ViewController.swift; sourceTree = "<group>"; };
 		09B2314F2A21D6E50001F181 /* RealmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmViewController.swift; sourceTree = "<group>"; };
 		09C2583B2A0B727800125BF7 /* TabelViewCell2_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabelViewCell2_Header.swift; sourceTree = "<group>"; };
+		09C6718B2A21DAD9001AC681 /* DummyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyFile.swift; sourceTree = "<group>"; };
 		09DFCE5F29F3A86E0065B782 /* FirstView_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView_DelegatePattern.swift; sourceTree = "<group>"; };
 		09DFCE6129F3ABDB0065B782 /* BaseViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController2.swift; sourceTree = "<group>"; };
 		09DFCE6329F3AC230065B782 /* BaseView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView2.swift; sourceTree = "<group>"; };
@@ -432,6 +434,11 @@
 			children = (
 				09B2314D2A21D5F40001F181 /* week7ViewController.swift */,
 				09B2314F2A21D6E50001F181 /* RealmViewController.swift */,
+				09DFCE6529F3B1650065B782 /* CarrotViewController.swift */,
+				09DFCE6929F3B27C0065B782 /* CarrotTableViewCell.swift */,
+				09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */,
+				09DFCE6D29F3B5150065B782 /* TradeEnum.swift */,
+				09DFCE6F29F3B54F0065B782 /* Carrot.swift */,
 			);
 			path = feat7;
 			sourceTree = "<group>";
@@ -459,11 +466,7 @@
 		09DFCE7A29F3BD150065B782 /* Carrot */ = {
 			isa = PBXGroup;
 			children = (
-				09DFCE6529F3B1650065B782 /* CarrotViewController.swift */,
-				09DFCE6B29F3B36C0065B782 /* BaseViewController.swift */,
-				09DFCE6929F3B27C0065B782 /* CarrotTableViewCell.swift */,
-				09DFCE6D29F3B5150065B782 /* TradeEnum.swift */,
-				09DFCE6F29F3B54F0065B782 /* Carrot.swift */,
+				09C6718B2A21DAD9001AC681 /* DummyFile.swift */,
 			);
 			path = Carrot;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				09EF00DE29F1629F000A2A2E /* UIButton+.swift in Sources */,
 				0930483D2A02BADC007FA3DC /* PagingTabBarCell.swift in Sources */,
 				0930483B2A02BAAF007FA3DC /* PagingTabBar.swift in Sources */,
+				09C6718C2A21DAD9001AC681 /* DummyFile.swift in Sources */,
 				0951CE332A0A2F9100C3F02E /* File.swift in Sources */,
 				099C409529F912A000B2CAFA /* MyPage.swift in Sources */,
 				09454A752A0A5CC100314F20 /* TableViewCell2.swift in Sources */,
