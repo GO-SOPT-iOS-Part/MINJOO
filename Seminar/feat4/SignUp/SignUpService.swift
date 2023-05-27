@@ -19,7 +19,7 @@ final class SignUpService {
                 nickname: String,
                 password: String,
                 completion: @escaping (NetworkResult <Any>) -> Void) {
-        let url = Config.baseURL + "/user/signup"
+        let url = Config.baseURL + "/user/{homeNumber=int}/weekly"
         let header: HTTPHeaders = ["Content-Type" : "application/json"]
         let body: Parameters = [
             "password" : password,
